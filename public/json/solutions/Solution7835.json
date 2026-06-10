@@ -1,0 +1,982 @@
+{
+  "key" : {
+    "code" : 7835,
+    "key1" : 9,
+    "key2" : 11,
+    "key3" : 37
+  },
+  "type" : "DATE",
+  "dayOfWeek" : "TUESDAY",
+  "dayOfMonth" : 25,
+  "month" : "MAY",
+  "numberOfSolutions" : 242,
+  "combinations" : [ {
+    "index" : 353116,
+    "combination" : "11123333701022666377144266699744828550974488855599",
+    "compactCombination" : "0A1C4E6U6k0O5I2h0c"
+  }, {
+    "index" : 355308,
+    "combination" : "11125559901022755966144277996644828730664488873333",
+    "compactCombination" : "0A1C6l6U4E1S5O2h2H"
+  }, {
+    "index" : 365064,
+    "combination" : "11133334401077793442177999442266695580826665558882",
+    "compactCombination" : "0A1S4D4G2i0f4L2l1N"
+  }, {
+    "index" : 365634,
+    "combination" : "11133334402013777944221779994426668980552666888555",
+    "compactCombination" : "1A7K0D2H2m0g4N2j1P"
+  }, {
+    "index" : 403278,
+    "combination" : "11144666701044466677184855599738885520973333222299",
+    "compactCombination" : "0A2j6f1C0Y0F5I2V0c"
+  }, {
+    "index" : 406896,
+    "combination" : "11144886601044998662154498866255399770225533337772",
+    "compactCombination" : "0A5S6h6C5U1H2k1F2O"
+  }, {
+    "index" : 408082,
+    "combination" : "11144888701024483877152244399755266630975526663399",
+    "compactCombination" : "0A7M3Q0D5U0i5I0F0c"
+  }, {
+    "index" : 408083,
+    "combination" : "11144888701024489877152244999755266630975526663333",
+    "compactCombination" : "0A7M6l0D5U0i5I0F3Q"
+  }, {
+    "index" : 408699,
+    "combination" : "11144977701044499977184855596638885520663333222266",
+    "compactCombination" : "0A2j6f1C0Y1d0G2V3F"
+  }, {
+    "index" : 429324,
+    "combination" : "11155477701055544477133339446683899920668889222266",
+    "compactCombination" : "0A2j0V5F2C1d0G2f1X"
+  }, {
+    "index" : 436843,
+    "combination" : "11155574402015577444221997888426669780832666993333",
+    "compactCombination" : "1A7K2l7H0D0g3F0b0X"
+  }, {
+    "index" : 439615,
+    "combination" : "11155666703015566677341588899734448280973344222299",
+    "compactCombination" : "1A6j3K5V7D0F5I0Y0c"
+  }, {
+    "index" : 439618,
+    "combination" : "11155666703015566677381854499738882440973322224499",
+    "compactCombination" : "1A2h3K0a1D0F5I2V0c"
+  }, {
+    "index" : 441734,
+    "combination" : "11155886603015558662341998866234449770223344997772",
+    "compactCombination" : "1A5S3K5V6D1H2k1F0X"
+  }, {
+    "index" : 442592,
+    "combination" : "11155888701055584877166644499736664420973333222299",
+    "compactCombination" : "0A2j6f3O2C0V5I0F0c"
+  }, {
+    "index" : 443231,
+    "combination" : "11155977703015599977341588896634448280663344222266",
+    "compactCombination" : "1A6j3K5V7D1d0G0Y3F"
+  }, {
+    "index" : 443234,
+    "combination" : "11155977703015599977381854496638882440663322224466",
+    "compactCombination" : "1A2h3K0a1D1d0G2V3F"
+  }, {
+    "index" : 462058,
+    "combination" : "11166675503016667552341997752234449780823344998882",
+    "compactCombination" : "1A1S3K5V7H0D1F2l0X"
+  }, {
+    "index" : 462383,
+    "combination" : "11166677701026669477152299944455289830445528883333",
+    "compactCombination" : "0A7M6l5R5U0D0G2i1O"
+  }, {
+    "index" : 472815,
+    "combination" : "11174222201077444233157994488355796660835599666883",
+    "compactCombination" : "0A4F1S5E5U0j3C1c2X"
+  }, {
+    "index" : 475706,
+    "combination" : "11176665503017666552341779952234447980823344998882",
+    "compactCombination" : "1A1S3K5V7H0E7D2l2a"
+  }, {
+    "index" : 499035,
+    "combination" : "11177794401077999442166695442236665580823333558882",
+    "compactCombination" : "0A1S6f4G5Y0V4C2l1E"
+  }, {
+    "index" : 499131,
+    "combination" : "11177795501077999552166694452236664480823333448882",
+    "compactCombination" : "0A1S6f6Y7H0V4C2l1E"
+  }, {
+    "index" : 512757,
+    "combination" : "11188477701033844477153889446655399920665539222266",
+    "compactCombination" : "0A2j7M5F5U1d0G1D1X"
+  }, {
+    "index" : 513273,
+    "combination" : "11188555702018445577221884499726663440972666333399",
+    "compactCombination" : "1A7K6j2O4F0g5I3D0c"
+  }, {
+    "index" : 567721,
+    "combination" : "11199333301044936662144499666284855770228885557772",
+    "compactCombination" : "0A5S0F1L6i0Q2k2f0D"
+  }, {
+    "index" : 577167,
+    "combination" : "12222449901028844955111844995566688770536667773333",
+    "compactCombination" : "3A0B2l4E7S0f6i3N2H"
+  }, {
+    "index" : 578461,
+    "combination" : "12222888701024483877111444399766655430976665553399",
+    "compactCombination" : "3A0B3Q7N6i0f5I0F0c"
+  }, {
+    "index" : 578462,
+    "combination" : "12222888701024489877111444999766655430976665553333",
+    "compactCombination" : "3A0B6l7N6i0f5I0F3Q"
+  }, {
+    "index" : 579067,
+    "combination" : "12222994401028894455111899445566688770536667773333",
+    "compactCombination" : "3A0B2l6G7S0f6i3N2F"
+  }, {
+    "index" : 598997,
+    "combination" : "15558884401055898442111999442266697770326667733332",
+    "compactCombination" : "3A1S2k4G4B0f4i0E1N"
+  }, {
+    "index" : 610661,
+    "combination" : "17733334401077793442111999442266695580826665558882",
+    "compactCombination" : "3A1S4D4G2i0f2B2l1N"
+  }, {
+    "index" : 734510,
+    "combination" : "22226665503027666555344799888134477980813344799111",
+    "compactCombination" : "2c4A3K0V6H0E7N0b0Y"
+  }, {
+    "index" : 734513,
+    "combination" : "22226665503029666555344999888134477980813344777111",
+    "compactCombination" : "2c4A3K0V6H0E2i0b3N"
+  }, {
+    "index" : 734610,
+    "combination" : "22226665504027666555444799888134477980813333799111",
+    "compactCombination" : "2c4A6f5K6H0E7N0b0Y"
+  }, {
+    "index" : 734613,
+    "combination" : "22226665504029666555444999888134477980813333777111",
+    "compactCombination" : "2c4A6f5K6H0E2i0b3N"
+  }, {
+    "index" : 778820,
+    "combination" : "22228877709023384477999388444155936660415553666111",
+    "compactCombination" : "2c4A7N7Q6f0j0G1E3K"
+  }, {
+    "index" : 967650,
+    "combination" : "33332555708083225577888124499766612440976661114499",
+    "compactCombination" : "3X7E4A0a4F0f5I2K0c"
+  }, {
+    "index" : 981398,
+    "combination" : "33334411103077441888777449185866699920556669222255",
+    "compactCombination" : "0G2j0A4D3d0f6K0R1X"
+  }, {
+    "index" : 993873,
+    "combination" : "33334477703024477666882449166682299910558829111555",
+    "compactCombination" : "2Y5L0A6D2m0R4F3U1X"
+  }, {
+    "index" : 994627,
+    "combination" : "33334477708083444977888111499966615550296661552222",
+    "compactCombination" : "0X2l4A7E0j0f0G2K3R"
+  }, {
+    "index" : 994629,
+    "combination" : "33334477708083444977888155499966615550296661112222",
+    "compactCombination" : "3X2l4A7E6Y0f0G2K3R"
+  }, {
+    "index" : 999284,
+    "combination" : "33334499708083444977888111499766615550276661552222",
+    "compactCombination" : "0X2l4A7E0j0f5I2K0G"
+  }, {
+    "index" : 999286,
+    "combination" : "33334499708083444977888155499766615550276661112222",
+    "compactCombination" : "3X2l4A7E6Y0f5I2K0G"
+  }, {
+    "index" : 999702,
+    "combination" : "33334556603044455662194488566219998770221119887772",
+    "compactCombination" : "3U5S0A3C1F1H2k3Y3V"
+  }, {
+    "index" : 999925,
+    "combination" : "33334666203044466622884455992187755590218877799111",
+    "compactCombination" : "2c7I0A3C2X0F2g3U2b"
+  }, {
+    "index" : 1011599,
+    "combination" : "33335554403077755442661977442266199980826611198882",
+    "compactCombination" : "3W1S0A4G4E1U0M2l3X"
+  }, {
+    "index" : 1011609,
+    "combination" : "33335554403099755442661977442266199780826611178882",
+    "compactCombination" : "3W1S0A4G4E1U5O2l0M"
+  }, {
+    "index" : 1019053,
+    "combination" : "33335577708083555977888111499966614440296661442222",
+    "compactCombination" : "0X2l4A3Y6E0f0G2K3R"
+  }, {
+    "index" : 1020791,
+    "combination" : "33335599708083555977888111499766614440276661442222",
+    "compactCombination" : "0X2l4A3Y6E0f5I2K0G"
+  }, {
+    "index" : 1031366,
+    "combination" : "33336664405093666442559991442255779180827771118882",
+    "compactCombination" : "2X1S4A4G3K0E6f2l3M"
+  }, {
+    "index" : 1032261,
+    "combination" : "33336665502073666555227449911127744980812744998881",
+    "compactCombination" : "1c7K4A4W6H0E1L2l2a"
+  }, {
+    "index" : 1032263,
+    "combination" : "33336665502073666555227994411127794480812799448881",
+    "compactCombination" : "1c7K4A6Y6H0E1L2l2X"
+  }, {
+    "index" : 1032302,
+    "combination" : "33336665503047666555444799888144277980812222799111",
+    "compactCombination" : "2c2f0A3K6H0E7N0b0Y"
+  }, {
+    "index" : 1032307,
+    "combination" : "33336665503049666555444999888144277980812222777111",
+    "compactCombination" : "2c2f0A3K6H0E2i0b3N"
+  }, {
+    "index" : 1032308,
+    "combination" : "33336665503049666555444999888144772980817772222111",
+    "compactCombination" : "2c6i0A3K6H0E6f0b3N"
+  }, {
+    "index" : 1035137,
+    "combination" : "33336667203044666722884499772184455970218855599111",
+    "compactCombination" : "2c7I0A4L2h0E1G3U0Y"
+  }, {
+    "index" : 1041023,
+    "combination" : "33336677703099664477888966444182899550412222555111",
+    "compactCombination" : "2c6f0A7Q2j1E0G0U0M"
+  }, {
+    "index" : 1043976,
+    "combination" : "33337222203099772666889447166689944710558844111555",
+    "compactCombination" : "2Y0F0A4W2m0R5E3U2M"
+  }, {
+    "index" : 1048374,
+    "combination" : "33337666203044766622884477992184455790218855599111",
+    "compactCombination" : "2c7I0A4L2h0F7E3U2b"
+  }, {
+    "index" : 1050808,
+    "combination" : "33337714403077791444888999111482896660552222666555",
+    "compactCombination" : "3G6f0A7H2m0j6C0U1N"
+  }, {
+    "index" : 1058353,
+    "combination" : "33337774403021117744662881994466228190556628899555",
+    "compactCombination" : "1N3M0A2H2m1U0E1X2b"
+  }, {
+    "index" : 1058366,
+    "combination" : "33337774403021117744882661994482266190558826699555",
+    "compactCombination" : "1N5L0A2H2m1X0E3U2b"
+  }, {
+    "index" : 1058385,
+    "combination" : "33337774403022227744661828994466188890556611199555",
+    "compactCombination" : "3W4M0A2H2m1U0E2X2b"
+  }, {
+    "index" : 1058445,
+    "combination" : "33337774403027711144662881994466228190556628899555",
+    "compactCombination" : "0P3M0A2H2m1U4D1X2b"
+  }, {
+    "index" : 1058456,
+    "combination" : "33337774403027711144882661994482266190558826699555",
+    "compactCombination" : "0P5L0A2H2m1X4D3U2b"
+  }, {
+    "index" : 1058467,
+    "combination" : "33337774403027766644882196664482219990558821119555",
+    "compactCombination" : "3X5L0A2H2m0P4D3U3Y"
+  }, {
+    "index" : 1079028,
+    "combination" : "33338884403099828744661922774466199270556611127555",
+    "compactCombination" : "3W1O0A2H2m1U3Q0E0M"
+  }, {
+    "index" : 1093184,
+    "combination" : "33339277703099924477669522444166558280416655888111",
+    "compactCombination" : "2c5E0A7Q5W1U0G2j1C"
+  }, {
+    "index" : 1093236,
+    "combination" : "33339411103099944412669588441266558770226655887772",
+    "compactCombination" : "1G5S0A5F5W1U2k3Y1C"
+  }, {
+    "index" : 1094244,
+    "combination" : "33339556603099955662889445166287744410228877741112",
+    "compactCombination" : "3b5S0A7X7F1H2g3U1C"
+  }, {
+    "index" : 1094875,
+    "combination" : "33339666203099966622889555442187755440218877744111",
+    "compactCombination" : "2c7I0A6a0X0F2g3U1C"
+  }, {
+    "index" : 1099529,
+    "combination" : "33339914403088971444668997111466882770556622227555",
+    "compactCombination" : "3G2h0A7H2m1U7P3M2E"
+  }, {
+    "index" : 1103973,
+    "combination" : "33339944108083944412888994111266655770226665557772",
+    "compactCombination" : "2G5S4A1F6i0f2k2K2E"
+  }, {
+    "index" : 1108752,
+    "combination" : "33339974403088977444668997111466882710556622221555",
+    "compactCombination" : "0b2h0A7H2m1U3F3M2E"
+  }, {
+    "index" : 1112104,
+    "combination" : "33422225503044427555399447711139666780819966678881",
+    "compactCombination" : "1c4D7A5C6H0h3P2l2V"
+  }, {
+    "index" : 1121295,
+    "combination" : "33446665503044666555377449911132777980812222998881",
+    "compactCombination" : "1c6f7A0C6H0E2V2l2a"
+  }, {
+    "index" : 1129026,
+    "combination" : "33477755503044477552399441112239666180829966618882",
+    "compactCombination" : "0a1S7A5C4G0h0D2l2V"
+  }, {
+    "index" : 1129049,
+    "combination" : "33477788203044477822399445882139666550219966655111",
+    "compactCombination" : "2c7I7A5C3a0h0D1G2V"
+  }, {
+    "index" : 1133220,
+    "combination" : "33555277703055222277399441886639444180669941118866",
+    "compactCombination" : "2X6E7A1W0C1d0G3b2V"
+  }, {
+    "index" : 1133915,
+    "combination" : "33555777203055772222399441886639444180669941118866",
+    "compactCombination" : "2X2G7A1W0C1d4E3b2V"
+  }, {
+    "index" : 1133918,
+    "combination" : "33555777403055774442399111442239666180829966618882",
+    "compactCombination" : "1X1S7A3G0C0h4E2l2V"
+  }, {
+    "index" : 1140152,
+    "combination" : "33666277703066624477399522444139558280419955888111",
+    "compactCombination" : "2c5E7A7Q5W0C0G2j2V"
+  }, {
+    "index" : 1140204,
+    "combination" : "33666411103066644412399588441239558770229955887772",
+    "compactCombination" : "1G5S7A5F5W0C2k3Y2V"
+  }, {
+    "index" : 1142900,
+    "combination" : "33666888703066684877311144499735514420975551222299",
+    "compactCombination" : "1V2j7A3O2f0C5I0F0c"
+  }, {
+    "index" : 1143047,
+    "combination" : "33666977703066699977344888195534482810554422221115",
+    "compactCombination" : "3b2h7A4U1d0C0G0X3F"
+  }, {
+    "index" : 1148486,
+    "combination" : "33755566203077556622399744662139878440219988844111",
+    "compactCombination" : "2c7I7A2Y4D1G5C2h2V"
+  }, {
+    "index" : 1170163,
+    "combination" : "33888446603087844662399744166239775510229975551112",
+    "compactCombination" : "3b5S7A4E2i1H1M0C2V"
+  }, {
+    "index" : 1170164,
+    "combination" : "33888446603089844662399944166239775510227775551112",
+    "compactCombination" : "3b5S7A4E2i1H6f0C1L"
+  }, {
+    "index" : 1203141,
+    "combination" : "38855577703085594477388999444133296660412222666111",
+    "compactCombination" : "2c2f3A7Q0D0j0G1B1N"
+  }, {
+    "index" : 1203316,
+    "combination" : "38855666203085566622388544992133774490217774499111",
+    "compactCombination" : "2c7I3A4X7D0F6f1B2b"
+  }, {
+    "index" : 1203319,
+    "combination" : "38855666203085566622388599442133779440217779944111",
+    "compactCombination" : "2c7I3A6a7D0F6f1B2Y"
+  }, {
+    "index" : 1912081,
+    "combination" : "72222559907042555966774441996687844130668881113333",
+    "compactCombination" : "2X4B6l5M2E1S7A2f2H"
+  }, {
+    "index" : 1921564,
+    "combination" : "73333666207055366622775544992187854490218884499111",
+    "compactCombination" : "2c7I4B4X1M0F7A2f2b"
+  }, {
+    "index" : 1921565,
+    "combination" : "73333666207055366622775554992187844490218884499111",
+    "compactCombination" : "2c7I4B3X6M0F7A2f2b"
+  }, {
+    "index" : 1921569,
+    "combination" : "73333666207055366622775599442187859440218889944111",
+    "compactCombination" : "2c7I4B6a1M0F7A2f2Y"
+  }, {
+    "index" : 1937523,
+    "combination" : "74499333307044932222774499125587866610558886661115",
+    "compactCombination" : "3b0Q0F2B1d0i7A2f0D"
+  }, {
+    "index" : 1937531,
+    "combination" : "74499333307044935552774499155287866610228886661112",
+    "compactCombination" : "3b5S0F2B4Q0i7A2f0D"
+  }, {
+    "index" : 1944650,
+    "combination" : "75551114407055124466779912446687892230668889923333",
+    "compactCombination" : "0E5O6l6G4B1S7A2f0W"
+  }, {
+    "index" : 1946609,
+    "combination" : "75553333207055366622779946662187894440218889944111",
+    "compactCombination" : "2c7I0E5Y4B0P7A2f0W"
+  }, {
+    "index" : 1948025,
+    "combination" : "75554466607055446662779441112237999180823333918882",
+    "compactCombination" : "0a1S6f4D4B0G7A2l3W"
+  }, {
+    "index" : 1948805,
+    "combination" : "75556664407055666442779111442237999180823333918882",
+    "compactCombination" : "1X1S6f4G4B0E7A2l3W"
+  }, {
+    "index" : 2012974,
+    "combination" : "77733334409077663442999166442255916680825551118882",
+    "compactCombination" : "3X1S4D4G6f1O0A2l3K"
+  }, {
+    "index" : 2013052,
+    "combination" : "77733335502077993555224491886624499180662441118866",
+    "compactCombination" : "2X7K4D6V6H1d0A3b2O"
+  }, {
+    "index" : 2026502,
+    "combination" : "77788666203077866622355884992135544490213354499111",
+    "compactCombination" : "2c7I3K3X1V0F0A1D2b"
+  }, {
+    "index" : 2027144,
+    "combination" : "77788995503077819555344881996634411120663344222266",
+    "compactCombination" : "2N2j3K0V6H1d0A1D0F"
+  }, {
+    "index" : 2027149,
+    "combination" : "77788995504077819555444881996634411120663333222266",
+    "compactCombination" : "2N2j6f5K6H1d0A1D0F"
+  }, {
+    "index" : 2040075,
+    "combination" : "79944333307094432222779944125587866610558886661115",
+    "compactCombination" : "3b0Q0F0D1d0i7A2f0B"
+  }, {
+    "index" : 2040083,
+    "combination" : "79944333307094435552779944155287866610228886661112",
+    "compactCombination" : "3b5S0F0D4Q0i7A2f0B"
+  }, {
+    "index" : 2041794,
+    "combination" : "79966611107096661553779944155387844420538884222233",
+    "compactCombination" : "0G2j5S1X1R0D7A2f0B"
+  }, {
+    "index" : 2041803,
+    "combination" : "79966611107096665512779944551287844350228884433332",
+    "compactCombination" : "1G5S6k6X7Q0D7A2f0B"
+  }, {
+    "index" : 2043085,
+    "combination" : "79966655507096665533779944111387844420138884222213",
+    "compactCombination" : "1b2j1S1X0G0D7A2f0B"
+  }, {
+    "index" : 2103673,
+    "combination" : "88111222208099172666884917766644499370554433337555",
+    "compactCombination" : "1C0F2h3U2m0R5P3A0M"
+  }, {
+    "index" : 2103677,
+    "combination" : "88111222208099172666889417766639944470553333447555",
+    "compactCombination" : "1C0F6f5X2m0R5P3A2M"
+  }, {
+    "index" : 2104412,
+    "combination" : "88111277708012222477881559944466655930446665993333",
+    "compactCombination" : "0C2D6l5R7X0f0G3A2a"
+  }, {
+    "index" : 2104414,
+    "combination" : "88111277708012222477881994446655593440665599333366",
+    "compactCombination" : "0C2D6j3P0f1d0G3A2X"
+  }, {
+    "index" : 2104506,
+    "combination" : "88111333308014432222881449926655774490665557779966",
+    "compactCombination" : "0C0Q0F0N6f1d2h3A0a"
+  }, {
+    "index" : 2106566,
+    "combination" : "88111555708012445577881224499766623440976662333399",
+    "compactCombination" : "0C7N6j2O4F0f5I3A0c"
+  }, {
+    "index" : 2107021,
+    "combination" : "88111666208014466623881449922355774490235557779933",
+    "compactCombination" : "0C5H5S0N6f0F2h3A0a"
+  }, {
+    "index" : 2107240,
+    "combination" : "88111666708012366677881234499755223440975552334499",
+    "compactCombination" : "0C5M3O0a6f0F5I3A0c"
+  }, {
+    "index" : 2107246,
+    "combination" : "88111666708012466677881244499755223440975552333399",
+    "compactCombination" : "0C5M6j5O6f0F5I3A0c"
+  }, {
+    "index" : 2111275,
+    "combination" : "88111977708012399977881234496655223440665552334466",
+    "compactCombination" : "0C5M3O0a6f1d0G3A3F"
+  }, {
+    "index" : 2111284,
+    "combination" : "88111977708012499977881244496655223440665552333366",
+    "compactCombination" : "0C5M6j5O6f1d0G3A3F"
+  }, {
+    "index" : 2111939,
+    "combination" : "88133334408013777444881119775466699920556669222255",
+    "compactCombination" : "3C2j0D7H3d0f0O3A1X"
+  }, {
+    "index" : 2112162,
+    "combination" : "88144222208014449233881114999366655770936665557773",
+    "compactCombination" : "3C4F1S7D6i0f2k3A3Q"
+  }, {
+    "index" : 2121088,
+    "combination" : "88222211108099271666889447166639944770553333447555",
+    "compactCombination" : "0G4C6f0X2m0R7P3A2M"
+  }, {
+    "index" : 2124166,
+    "combination" : "88222245508072444555887744911166679990316667933331",
+    "compactCombination" : "1c0C2k3E6H0f5M3A1Y"
+  }, {
+    "index" : 2124276,
+    "combination" : "88222249908072444933887744991366675550136667551113",
+    "compactCombination" : "2b0C1S3E0j0f5M3A2H"
+  }, {
+    "index" : 2126900,
+    "combination" : "88222277708099277666884911166644499310554433331555",
+    "compactCombination" : "1Y4C2h3U2m0R4F3A0M"
+  }, {
+    "index" : 2126904,
+    "combination" : "88222277708099277666889411166639944410553333441555",
+    "compactCombination" : "1Y4C6f5X2m0R4F3A2M"
+  }, {
+    "index" : 2128586,
+    "combination" : "88222295508072999555887794411166674440316667433331",
+    "compactCombination" : "1c0C2k1Y6H0f5M3A1E"
+  }, {
+    "index" : 2131444,
+    "combination" : "88233666708022366677882134499755213440975551114499",
+    "compactCombination" : "3X7C1D0a6f0F5I3A0c"
+  }, {
+    "index" : 2131513,
+    "combination" : "88233977708022399977882134496655213440665551114466",
+    "compactCombination" : "3X7C1D0a6f1d0G3A3F"
+  }, {
+    "index" : 2133791,
+    "combination" : "88266677708026669977882244911155244990315554433331",
+    "compactCombination" : "1c3C2k6X6f0D0G3A2Q"
+  }, {
+    "index" : 2137315,
+    "combination" : "88332666708032266677883124499755312440975551114499",
+    "compactCombination" : "3X1D7C0a6f0F5I3A0c"
+  }, {
+    "index" : 2137334,
+    "combination" : "88332977708032299977883124496655312440665551114466",
+    "compactCombination" : "3X1D7C0a6f1d0G3A3F"
+  }, {
+    "index" : 2141590,
+    "combination" : "88333344708011134477889915544766691550276669952222",
+    "compactCombination" : "1M2l4C0G7a0f5I3A0W"
+  }, {
+    "index" : 2141989,
+    "combination" : "88333355208037775522884997752144496660214499666111",
+    "compactCombination" : "2c7I0C3U1G0j0N3A2X"
+  }, {
+    "index" : 2141992,
+    "combination" : "88333355208037775522889947752166694440216669944111",
+    "compactCombination" : "2c7I0C5Y1G0f0N3A0W"
+  }, {
+    "index" : 2144156,
+    "combination" : "88333377708011134477889914445566691420556669922225",
+    "compactCombination" : "1M6k4C1P1d0f0G3A0W"
+  }, {
+    "index" : 2144218,
+    "combination" : "88333377708034455577889144556699914420669111222266",
+    "compactCombination" : "2V2j0C2N4P1d0G3A1U"
+  }, {
+    "index" : 2144283,
+    "combination" : "88333377708036664477889666444199925550419222255111",
+    "compactCombination" : "2c2g0C7Q4j0N0G3A1U"
+  }, {
+    "index" : 2146911,
+    "combination" : "88337666208037766622883744992155374490215554499111",
+    "compactCombination" : "2c7I7C4X6f0F3D3A2b"
+  }, {
+    "index" : 2146914,
+    "combination" : "88337666208037766622883799442155379440215559944111",
+    "compactCombination" : "2c7I7C6a6f0F3D3A2Y"
+  }, {
+    "index" : 2147194,
+    "combination" : "88337779208037799922883669442155366440215556644111",
+    "compactCombination" : "2c7I7C6a6f1X4D3A1F"
+  }, {
+    "index" : 2152063,
+    "combination" : "88443333208044366622889446662199977550219777555111",
+    "compactCombination" : "2c7I0E0C2j0P6g3A1U"
+  }, {
+    "index" : 2154804,
+    "combination" : "88449955208044495522887749952166677730216663333111",
+    "compactCombination" : "2c7I2i7C1G0f2W3A0E"
+  }, {
+    "index" : 2154805,
+    "combination" : "88449955208044495522887749952177736660213333666111",
+    "compactCombination" : "2c7I2f7C1G0j6U3A0E"
+  }, {
+    "index" : 2160713,
+    "combination" : "88552222708055524477889166444799916630479111663333",
+    "compactCombination" : "2V0E6l7Q6C1Y5I3A1U"
+  }, {
+    "index" : 2161902,
+    "combination" : "88553333208055777322885774992166644490216664499111",
+    "compactCombination" : "2c7I4E3X7C0f4N3A2b"
+  }, {
+    "index" : 2163585,
+    "combination" : "88554411108055441733885449177366699920736669222273",
+    "compactCombination" : "0G2j1S4D7C0f5R3A1X"
+  }, {
+    "index" : 2166190,
+    "combination" : "88555222208055442777889144776699913440669111333366",
+    "compactCombination" : "2V0F6j0O0C1d4Q3A1U"
+  }, {
+    "index" : 2166635,
+    "combination" : "88555277708055222277884993333144496660314499666111",
+    "compactCombination" : "2c6E4a3U0C0j0G3A2X"
+  }, {
+    "index" : 2166641,
+    "combination" : "88555277708055222277889943333166694440316669944111",
+    "compactCombination" : "2c6E4a5Y0C0f0G3A0W"
+  }, {
+    "index" : 2166843,
+    "combination" : "88555333308075534111887744499166674420916667222299",
+    "compactCombination" : "1R2j0F3O4C0f5M3A0c"
+  }, {
+    "index" : 2168771,
+    "combination" : "88555777208055772222884993333144496660314499666111",
+    "compactCombination" : "2c2G4a3U0C0j4E3A2X"
+  }, {
+    "index" : 2168777,
+    "combination" : "88555777208055772222889943333166694440316669944111",
+    "compactCombination" : "2c2G4a5Y0C0f4E3A0W"
+  }, {
+    "index" : 2173280,
+    "combination" : "88559944208055944422885994772166637770216663333111",
+    "compactCombination" : "2c7I6i1F7C0f6Y3A2E"
+  }, {
+    "index" : 2174016,
+    "combination" : "88661114408066199444886619777455529930775522223333",
+    "compactCombination" : "0E6h6l7H0f1C0b3A2P"
+  }, {
+    "index" : 2174824,
+    "combination" : "88663333708066111377886614499755521440975522224499",
+    "compactCombination" : "0O6h4E0a0f1C5I3A0c"
+  }, {
+    "index" : 2174915,
+    "combination" : "88663377708066377111886634499155523440915522224499",
+    "compactCombination" : "1R6h7E0a0f1C4F3A0c"
+  }, {
+    "index" : 2176816,
+    "combination" : "88666111208066612222884991777544493770554499333355",
+    "compactCombination" : "0F2G6j3U5d0C4a3A2X"
+  }, {
+    "index" : 2178219,
+    "combination" : "88666155508066619553884111999344427770934422227733",
+    "compactCombination" : "2D6h5S3U4G0C0j3A3Q"
+  }, {
+    "index" : 2178220,
+    "combination" : "88666155508066619553884111999344477720934477222233",
+    "compactCombination" : "2D2j5S3U4G0C4h3A3Q"
+  }, {
+    "index" : 2179613,
+    "combination" : "88666333308066677732884995177244495510224499551112",
+    "compactCombination" : "3b5S4F3U5Y0C0P3A2X"
+  }, {
+    "index" : 2181412,
+    "combination" : "88666559908066655933884775991344427770134422221113",
+    "compactCombination" : "2b6h1S3U7F0C2X3A2H"
+  }, {
+    "index" : 2183456,
+    "combination" : "88666994408066619444887771995437711120553333222255",
+    "compactCombination" : "2N2j6f7H3d0C4V3A0F"
+  }, {
+    "index" : 2185216,
+    "combination" : "88722225508074429555887744999166674430916663333111",
+    "compactCombination" : "2c4D2i2N6H0f7C3A3Q"
+  }, {
+    "index" : 2185858,
+    "combination" : "88733335508073449555887744999166672440916662222111",
+    "compactCombination" : "2c6i0D0O6H0f7C3A3Q"
+  }, {
+    "index" : 2187132,
+    "combination" : "88755566208077556622889744662199973440219333344111",
+    "compactCombination" : "2c7I2g2Y4D1G5C3A1U"
+  }, {
+    "index" : 2197033,
+    "combination" : "88777222208099772666884911166644499310554433331555",
+    "compactCombination" : "1Y0F2h3U2m0R0C3A0M"
+  }, {
+    "index" : 2197037,
+    "combination" : "88777222208099772666889411166639944410553333441555",
+    "compactCombination" : "1Y0F6f5X2m0R0C3A2M"
+  }, {
+    "index" : 2211530,
+    "combination" : "88777995508014779555881444996611134420663333222266",
+    "compactCombination" : "2K2j2f5N6H1d0C3A0F"
+  }, {
+    "index" : 2225961,
+    "combination" : "88811155508084419553664441999366427770936622227733",
+    "compactCombination" : "1D6h5S1M4G1U0j0A3Q"
+  }, {
+    "index" : 2225962,
+    "combination" : "88811155508084419553664441999366477720936677222233",
+    "compactCombination" : "1D2j5S1M4G1U4h0A3Q"
+  }, {
+    "index" : 2226225,
+    "combination" : "88811155708084415577666441599766634420973333222299",
+    "compactCombination" : "1D2j2f0N7G0U5I0A0c"
+  }, {
+    "index" : 2226962,
+    "combination" : "88811177708081366977544136699955443660295544332222",
+    "compactCombination" : "0D2l3O2V3U1P0G0A3R"
+  }, {
+    "index" : 2226972,
+    "combination" : "88811177708081555977666155499966634440293333442222",
+    "compactCombination" : "0D2l2f3Y0O0U0G0A3R"
+  }, {
+    "index" : 2226986,
+    "combination" : "88811177708081994477555194446635599420663333222266",
+    "compactCombination" : "0D2j6f1P4U1d0G0A2O"
+  }, {
+    "index" : 2227365,
+    "combination" : "88811194408081999444666197775466637720553333222255",
+    "compactCombination" : "0D2j2f7H3d0U4Y0A1E"
+  }, {
+    "index" : 2228042,
+    "combination" : "88811199708081366977544136699755443660275544332222",
+    "compactCombination" : "0D2l3O2V3U1P5I0A0G"
+  }, {
+    "index" : 2228045,
+    "combination" : "88811199708081555977666155499766634440273333442222",
+    "compactCombination" : "0D2l2f3Y0O0U5I0A0G"
+  }, {
+    "index" : 2228808,
+    "combination" : "88814477708081444977666111499966635550293333552222",
+    "compactCombination" : "3D2l2f7E0j0U0G0A3R"
+  }, {
+    "index" : 2228856,
+    "combination" : "88814499708081444977666111499766635550273333552222",
+    "compactCombination" : "3D2l2f7E0j0U5I0A0G"
+  }, {
+    "index" : 2229004,
+    "combination" : "88815577708081555977666111499966634440293333442222",
+    "compactCombination" : "3D2l2f3Y6E0U0G0A3R"
+  }, {
+    "index" : 2229013,
+    "combination" : "88815599708081555977666111499766634440273333442222",
+    "compactCombination" : "3D2l2f3Y6E0U5I0A0G"
+  }, {
+    "index" : 2230098,
+    "combination" : "88821114408082199744662219774466329970556633337555",
+    "compactCombination" : "0E5C6h2H2m1U3Q0A2P"
+  }, {
+    "index" : 2233255,
+    "combination" : "88822224408087211144666771994466637190553333799555",
+    "compactCombination" : "0P0D2f2H2m0U5N0A2b"
+  }, {
+    "index" : 2233303,
+    "combination" : "88822224408087724466577791446655999130665591113333",
+    "compactCombination" : "2X4D6l6G3U1S6L0A1W"
+  }, {
+    "index" : 2233329,
+    "combination" : "88822224408089254466199955446619775530661117773333",
+    "compactCombination" : "3U0D6l6G5O1S2h0A1L"
+  }, {
+    "index" : 2233347,
+    "combination" : "88822224408089524466199955446619775530661117773333",
+    "compactCombination" : "3U4D6l6G3O1S2h0A1L"
+  }, {
+    "index" : 2233353,
+    "combination" : "88822224408089724466199977446619555730661115573333",
+    "compactCombination" : "3U4D6l6G4h1S5O0A1L"
+  }, {
+    "index" : 2239431,
+    "combination" : "88823333708082244377661244499766124550976611155599",
+    "compactCombination" : "3W7D4E1O6k1U5I0A0c"
+  }, {
+    "index" : 2240273,
+    "combination" : "88825577708082554477662295444166329990416633339111",
+    "compactCombination" : "2c5C6h7Q1E1U0G0A3Y"
+  }, {
+    "index" : 2246790,
+    "combination" : "88833334408083277444192222777419996660551119666555",
+    "compactCombination" : "3U2M0D7H2m0j2P0A3V"
+  }, {
+    "index" : 2246837,
+    "combination" : "88833334408083772444197772222419996660551119666555",
+    "compactCombination" : "3U6P0D7H2m0j6M0A3V"
+  }, {
+    "index" : 2246862,
+    "combination" : "88833334408083777444661119775466199920556619222255",
+    "compactCombination" : "0W2j0D7H3d1U0O0A1X"
+  }, {
+    "index" : 2248133,
+    "combination" : "88833334708083244477111224499716662550971666255599",
+    "compactCombination" : "0U1N0D3F6k0g5I0A0c"
+  }, {
+    "index" : 2248288,
+    "combination" : "88833335508083479555664447999166442770916622227111",
+    "compactCombination" : "2c2h0D3M6H1U7P0A3Q"
+  }, {
+    "index" : 2249790,
+    "combination" : "88833336608083555662144995566214449770221114997772",
+    "compactCombination" : "3U5S0D7V4O1H2k0A0X"
+  }, {
+    "index" : 2261876,
+    "combination" : "88844222208084449233661114999366155770936615557773",
+    "compactCombination" : "0W4F1S7D6i1U2k0A3Q"
+  }, {
+    "index" : 2261884,
+    "combination" : "88844222208084455233664495551366999770136697771113",
+    "compactCombination" : "2b4F1S4C6P1U6i0A1W"
+  }, {
+    "index" : 2263294,
+    "combination" : "88844277708084425577194422556619993250661119333366",
+    "compactCombination" : "3U5E6j4C7Q1d0G0A3V"
+  }, {
+    "index" : 2263786,
+    "combination" : "88844333308084445532111994555216669770221666997772",
+    "compactCombination" : "0U5S4F7D6Q0g2k0A0X"
+  }, {
+    "index" : 2263806,
+    "combination" : "88844333308084477732559944177255966610225996661112",
+    "compactCombination" : "3b5S4F0D7U0i0P0A2W"
+  }, {
+    "index" : 2265858,
+    "combination" : "88844555108084445512666994111266639770223333997772",
+    "compactCombination" : "2G5S2f7D4F0U2k0A0X"
+  }, {
+    "index" : 2266886,
+    "combination" : "88844666208084466622333344992155537790215577799111",
+    "compactCombination" : "2c7I4U0D0f0F6h0A2b"
+  }, {
+    "index" : 2266887,
+    "combination" : "88844666208084466622559944772155937770215993333111",
+    "compactCombination" : "2c7I6i0D7U0F6Y0A2W"
+  }, {
+    "index" : 2266888,
+    "combination" : "88844666208084466622774455992137775590213333599111",
+    "compactCombination" : "2c7I6f4C7Y0F2U0A2b"
+  }, {
+    "index" : 2269799,
+    "combination" : "88844995208084495522774499552137776660213333666111",
+    "compactCombination" : "2c7I6f4C5G0j2U0A2F"
+  }, {
+    "index" : 2271231,
+    "combination" : "88852222708085524477111554499716663440971666333399",
+    "compactCombination" : "0U0E6j6P3D0g5I0A0c"
+  }, {
+    "index" : 2271297,
+    "combination" : "88853333708085544377111554499716664420971666222299",
+    "compactCombination" : "0U2j4E4O3D0g5I0A0c"
+  }, {
+    "index" : 2272953,
+    "combination" : "88855222208085552733111449977316664490731666449973",
+    "compactCombination" : "0U0F1S2X6D0g5R0A0a"
+  }, {
+    "index" : 2272958,
+    "combination" : "88855222208085552733111994477316669440731666994473",
+    "compactCombination" : "0U0F1S0a6D0g5R0A0X"
+  }, {
+    "index" : 2272961,
+    "combination" : "88855222208085552733661449977366144490736611149973",
+    "compactCombination" : "3W0F1S7X6D1U5R0A0a"
+  }, {
+    "index" : 2277957,
+    "combination" : "88855544108085544412666994111266639770223333997772",
+    "compactCombination" : "2G5S2f1F0D0U2k0A0X"
+  }, {
+    "index" : 2278477,
+    "combination" : "88855566608085536662144993333214449770221114997772",
+    "compactCombination" : "3U5S6P7V0D0G2k0A0X"
+  }, {
+    "index" : 2278800,
+    "combination" : "88855577708082554477192222446619993440661119333366",
+    "compactCombination" : "3U6M6j4P4D1d0G0A3V"
+  }, {
+    "index" : 2278818,
+    "combination" : "88855577708085577442166699444216669340221119933332",
+    "compactCombination" : "3U5S6k1Q0D0V4F0A2Y"
+  }, {
+    "index" : 2282413,
+    "combination" : "88866355708086635577144663599714443320971114222299",
+    "compactCombination" : "3U2j5E7V7G1D5I0A0c"
+  }, {
+    "index" : 2283863,
+    "combination" : "88866611108086661733559944177355944420735994222273",
+    "compactCombination" : "0G2j1S1X7U0D5R0A2W"
+  }, {
+    "index" : 2292712,
+    "combination" : "88866655508086665532144993333214449770221114997772",
+    "compactCombination" : "3U5S2P7V0G0D2k0A0X"
+  }, {
+    "index" : 2293569,
+    "combination" : "88866677708086663977144333399914445550291114552222",
+    "compactCombination" : "3U2l2N7V0j0D0G0A3R"
+  }, {
+    "index" : 2293587,
+    "combination" : "88866677708086669977222244911155244990315554433331",
+    "compactCombination" : "1c4U2k6X6f0D0G0A2Q"
+  }, {
+    "index" : 2295780,
+    "combination" : "88866699708086663977144333399714445550271114552222",
+    "compactCombination" : "3U2l2N7V0j0D5I0A0G"
+  }, {
+    "index" : 2297165,
+    "combination" : "88871114408087129444667712999466755220936655523333",
+    "compactCombination" : "0E3P2l7H2h1U1C0A3Q"
+  }, {
+    "index" : 2297187,
+    "combination" : "88871114408087199445667719445566729930556622223333",
+    "compactCombination" : "0E6h6l4G5S1U1C0A2P"
+  }, {
+    "index" : 2304968,
+    "combination" : "88891116608089991662555449166235544770223333447772",
+    "compactCombination" : "1E5S6f0X4U1H2k0A3D"
+  }, {
+    "index" : 2311386,
+    "combination" : "88899222208089442666779914466637771440553333111555",
+    "compactCombination" : "3Y0F6f2O2m0R2U0A2D"
+  }, {
+    "index" : 2313247,
+    "combination" : "88899277708089222277669943333166444550316644555111",
+    "compactCombination" : "2c6E4a3W2j1U0G0A2D"
+  }, {
+    "index" : 2313249,
+    "combination" : "88899277708089222277669943333166554440316655544111",
+    "compactCombination" : "2c6E4a5Y6h1U0G0A2D"
+  }, {
+    "index" : 2313597,
+    "combination" : "88899333308084936662144499666214455770221115557772",
+    "compactCombination" : "3U5S0F3L6i0Q2k0A0D"
+  }, {
+    "index" : 2314548,
+    "combination" : "88899411108083944412333399441266655770226665557772",
+    "compactCombination" : "1G5S2K5F6i0f2k0A0D"
+  }, {
+    "index" : 2316712,
+    "combination" : "88899445208089445522779944552137776660213333666111",
+    "compactCombination" : "2c7I6f6E5G0j2U0A2D"
+  }, {
+    "index" : 2317167,
+    "combination" : "88899446608089444662779945166237775510223333551112",
+    "compactCombination" : "3b5S6f1E5Y1H2U0A2D"
+  }, {
+    "index" : 2318138,
+    "combination" : "88899477708081944477555199446635511120663333222266",
+    "compactCombination" : "3N2j6f5F4U1d0G0A0D"
+  }, {
+    "index" : 2319185,
+    "combination" : "88899555108089445512669944111266344770226633337772",
+    "compactCombination" : "2G5S6h4N4F1U2k0A2D"
+  }, {
+    "index" : 2320306,
+    "combination" : "88899666208087966622555799442135577440213333744111",
+    "compactCombination" : "2c7I6f6a4U0F7N0A0D"
+  }, {
+    "index" : 2321742,
+    "combination" : "88899777208089772222669943333166444550316644555111",
+    "compactCombination" : "2c2G4a3W2j1U4E0A2D"
+  }, {
+    "index" : 2321744,
+    "combination" : "88899777208089772222669943333166554440316655544111",
+    "compactCombination" : "2c2G4a5Y6h1U4E0A2D"
+  }, {
+    "index" : 2323306,
+    "combination" : "88911166608099916662884491772255447770325554433332",
+    "compactCombination" : "1D1S2k0W6f0G6Y3A3C"
+  }, {
+    "index" : 2326800,
+    "combination" : "88996664408019666444881997775411137720553333222255",
+    "compactCombination" : "2K2j2f7H3d0E4Y3A0C"
+  } ]
+}
