@@ -1,34 +1,25 @@
-import {useEffect, useState} from "react";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import {useEffect, useRef, useState} from "react";
 import Stack from '@mui/material/Stack';
-import Modal from '@mui/material/Modal';
-import {Grid, GridInput} from "@/app/components/grid/Grid";
-import {createKeyFromCode} from "@/app/model/Key";
 import {allColorsState} from "@/app/components/result/ResultColorFilter";
-import keyboardNumberListener from "@/app/hooks/KeyboardNumberHandler";
-import {BlockColor,getBlockColor} from "@/app/enumeration/BlockColor";
 import * as blockColors from "@/app/enumeration/BlockColor";
+import {BlockColor, getBlockColor} from "@/app/enumeration/BlockColor";
 import {Cell} from "@/app/components/cell/Cell";
 import Tooltip from '@mui/material/Tooltip';
 import Radio from '@mui/material/Radio';
+import backgroundImage from "@/public/img/allColorBackground.png";
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
 
-export default function RadioColors({selectedBlock,setSelectedBlock}: {selectedBlock: BlockColor, setSelectedBlock:(blockColor:BlockColor)=>void}) {
+export interface RadioColorsProps {
+    updateBlock: (blockColor:BlockColor)=>void;
+}
 
-    const block:BlockColor = keyboardNumberListener(open);
+export default function RadioColors({updateBlock}: RadioColorsProps) {
+
+    const [blockValue,setBlockValue] = useState<string>(blockColors.RED.value);
+
+    useEffect(() => {
+        updateBlock(getBlockColor(blockValue));
+    }, [blockValue]);
 
     const sxParams = (colorValue:string)=> ({
         color: colorValue,
@@ -37,27 +28,43 @@ export default function RadioColors({selectedBlock,setSelectedBlock}: {selectedB
         }
     });
 
-    const isChecked = (blockColor:BlockColor) => {
-        return selectedBlock == blockColor;
+    const isChecked = (blockColor:string) => {
+        return blockValue == blockColor;
     }
 
-    const handleClick = (value:string, blockColor:BlockColor) => {
-        setSelectedBlock(block => blockColor);
-        console.log("Selected block:", selectedBlock);
+    const handleClick = (value:string) => {
+        setBlockValue(value);
     };
+
+    const customCellCss = {
+        "--chamfer": "0px",
+        borderRadius:'5px'
+    } as React.CSSProperties;
+    const cleanButton = <Cell key={"allNoneColors"} size={160/3} borderColor={blockColors.WHITE.color} backgroundImage={backgroundImage.blurDataURL} style={customCellCss}>
+        <Tooltip describeChild title="Emtpty cell" arrow>
+            <Radio id="radioColor_${index}"
+                   checked={isChecked(blockColors.UNKNOWN.value)}
+                   onChange={(event)=>handleClick(event.target.value)}
+                   value={blockColors.UNKNOWN.value}
+                   name="radio-buttons"
+                   sx={sxParams(blockColors.UNKNOWN.color)}
+                   style={{ width: "30px", padding:0, paddingTop:'8px', paddingLeft:'10px' }}
+            />
+        </Tooltip>
+    </Cell>
 
     const createRadio = (value:string,index:number) => {
         const color = allColorsState[value];
         const blockColor = getBlockColor(value);
-        return <Cell key={index} size={45} color={color}>
+        return <Cell key={index} size={40} color={color}>
                    <Tooltip describeChild title={blockColor.name} arrow>
                        <Radio id="radioColor_${index}"
-                              checked={isChecked(blockColor)}
-                              onChange={(event)=>handleClick(blockColor)}
-                              value={blockColor}
+                              checked={isChecked(blockColor.value)}
+                              onChange={(event)=>handleClick(event.target.value)}
+                              value={blockColor.value}
                               name="radio-buttons"
                               sx={sxParams(blockColors.UNKNOWN.color)}
-                              style={{ width: "33px", padding:0, paddingTop:'5px' }}
+                              style={{ width: "30px", padding:0, paddingTop:'5px' }}
                        />
                    </Tooltip>
                </Cell>
@@ -67,5 +74,10 @@ export default function RadioColors({selectedBlock,setSelectedBlock}: {selectedB
                         {'123456789'.split('').map((value,index) => createRadio(value,index))}
                     </Stack>
 
-    return ({buttons});
+    return (
+        <Stack direction="row" spacing={2}>
+            {cleanButton}
+            {buttons}
+        </Stack>
+    )
 }

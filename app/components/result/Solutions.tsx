@@ -12,7 +12,7 @@ export interface SolutionsProps {
     solution: Solution,
     cellSize:number,
     colorToShow:Record<string,string|undefined>,
-    filter:string|undefined
+    filter?:string|undefined
 }
 
 export default function Solutions({showSolutions,solution,cellSize,colorToShow,filter}: SolutionsProps) {
@@ -63,7 +63,7 @@ export default function Solutions({showSolutions,solution,cellSize,colorToShow,f
             }
         }) : [];
 
-    const [targetSolutionParams,setTargetSolutionParams] = useState<GridInput>({solution: '?'.repeat(50), squareSize: cellSize, colorToShow: colorToShow, cells: cells});
+    // const [targetSolutionParams,setTargetSolutionParams] = useState<GridInput>({solution: '?'.repeat(50), squareSize: cellSize, colorToShow: colorToShow, cells: cells});
 
 
     function targetSolution() {
