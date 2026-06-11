@@ -5,14 +5,9 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Modal from '@mui/material/Modal';
 import {Grid, GridInput} from "@/app/components/grid/Grid";
-import {createKeyFromCode} from "@/app/model/Key";
 import {allColorsState} from "@/app/components/result/ResultColorFilter";
-import keyboardNumberListener from "@/app/hooks/KeyboardNumberHandler";
-import {BlockColor,getBlockColor} from "@/app/enumeration/BlockColor";
 import * as blockColors from "@/app/enumeration/BlockColor";
-import {Cell} from "@/app/components/cell/Cell";
-import Tooltip from '@mui/material/Tooltip';
-import Radio from '@mui/material/Radio';
+import {BlockColor} from "@/app/enumeration/BlockColor";
 import RadioColors from "@/app/components/filters/output/RadioColors";
 
 const style = {
@@ -27,21 +22,24 @@ const style = {
     p: 4,
 };
 
-export default function FilterResultModal({solutionTemplate, onCloseAction}: {solutionTemplate?: string; onCloseAction?:(solutionFilter:string)=>void}) {
+export interface FilterResultModalProps {
+    solutionTemplate?: string;
+    onCloseAction?:(solutionFilter:string)=>void;
+}
+
+export default function FilterResultModal({solutionTemplate, onCloseAction}: FilterResultModalProps) {
 
     const [open, setOpen] = useState(false);
     const [solutionFilter, setSolutionFilter] = useState(solutionTemplate || blockColors.UNKNOWN.value.repeat(50));
     const [selectedBlock, setSelectedBlock] = useState<BlockColor>(blockColors.RED);
-
-    const block:BlockColor = keyboardNumberListener(open);
 
     useEffect(() => {
         console.log("Template:",solutionTemplate);
     }, [solutionFilter]);
 
     useEffect(() => {
-        setSelectedBlock(block);
-    }, [block]);
+        handleCleanFilter();
+    }, [solutionTemplate]);
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
@@ -49,6 +47,10 @@ export default function FilterResultModal({solutionTemplate, onCloseAction}: {so
             onCloseAction(solutionFilter);
         }
         setOpen(false);
+    }
+
+    const handleCleanFilter = () => {
+        setSolutionFilter(solutionTemplate || blockColors.UNKNOWN.value.repeat(50));
     }
 
     const handleCellClick = (index: number):void => {
@@ -81,7 +83,10 @@ export default function FilterResultModal({solutionTemplate, onCloseAction}: {so
                         </Typography>
                         <RadioColors updateBlock={setSelectedBlock}/>
                         <Grid gridData={emptySolution()}/>
-                        <Button variant="contained" size="small" key="close" onClick={handleClose}>Close</Button>
+                        <Stack direction="row" spacing={2}>
+                            <Button variant="contained" size="small" key="close" style={{width: "50%"}} onClick={handleCleanFilter}>Clean filter</Button>
+                            <Button variant="contained" size="small" key="close" style={{width: "50%"}} onClick={handleClose}>Close</Button>
+                        </Stack>
                     </Stack>
                 </Box>
             </Modal>

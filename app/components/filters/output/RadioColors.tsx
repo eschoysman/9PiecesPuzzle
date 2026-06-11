@@ -7,6 +7,7 @@ import {Cell} from "@/app/components/cell/Cell";
 import Tooltip from '@mui/material/Tooltip';
 import Radio from '@mui/material/Radio';
 import backgroundImage from "@/public/img/allColorBackground.png";
+import keyboardNumberListener from "@/app/hooks/KeyboardNumberHandler";
 
 
 export interface RadioColorsProps {
@@ -15,11 +16,17 @@ export interface RadioColorsProps {
 
 export default function RadioColors({updateBlock}: RadioColorsProps) {
 
-    const [blockValue,setBlockValue] = useState<string>(blockColors.RED.value);
+    const block:BlockColor = keyboardNumberListener();
+
+    const [blockValue,setBlockValue] = useState<string>(blockColors.UNKNOWN.value);
 
     useEffect(() => {
         updateBlock(getBlockColor(blockValue));
     }, [blockValue]);
+
+    useEffect(() => {
+        setBlockValue(block.value);
+    }, [block]);
 
     const sxParams = (colorValue:string)=> ({
         color: colorValue,
@@ -41,7 +48,7 @@ export default function RadioColors({updateBlock}: RadioColorsProps) {
         borderRadius:'5px'
     } as React.CSSProperties;
     const cleanButton = <Cell key={"allNoneColors"} size={160/3} borderColor={blockColors.WHITE.color} backgroundImage={backgroundImage.blurDataURL} style={customCellCss}>
-        <Tooltip describeChild title="Emtpty cell" arrow>
+        <Tooltip describeChild title="0: Emtpty cell" arrow>
             <Radio id="radioColor_${index}"
                    checked={isChecked(blockColors.UNKNOWN.value)}
                    onChange={(event)=>handleClick(event.target.value)}
@@ -57,7 +64,7 @@ export default function RadioColors({updateBlock}: RadioColorsProps) {
         const color = allColorsState[value];
         const blockColor = getBlockColor(value);
         return <Cell key={index} size={40} color={color}>
-                   <Tooltip describeChild title={blockColor.name} arrow>
+                   <Tooltip describeChild title={`${value}: ${blockColor.name}`} arrow>
                        <Radio id="radioColor_${index}"
                               checked={isChecked(blockColor.value)}
                               onChange={(event)=>handleClick(event.target.value)}
