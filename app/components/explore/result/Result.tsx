@@ -5,8 +5,6 @@ import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
 import Solutions from '@/app/components/explore/solution/Solutions';
 import ResultColorFilter, {noColorState} from "@/app/components/filters/output/ResultColorFilter";
-import KeyboardListener from '@/app/hooks/KeyboardNumberHandler';
-import {refresh} from "next/cache";
 import FilterResultModal from '@/app/components/modal/FilterResultModal'
 
 export default function Result({solution}: {solution: Solution}) {
@@ -15,15 +13,16 @@ export default function Result({solution}: {solution: Solution}) {
     const [showSolutions, setShowSolutions] = useState(false);
     const [colorShown, setColorShown] = useState<Record<string,string>>(noColorState);
     const [solutionFilter, setSolutionFilter] = useState<string|undefined>();
+    const [solutionTemplate, setSolutionTemplate] = useState<string>();
 
     useEffect(()=>{
-        let solutionTemplate = '?'.repeat(50);
+        let template = '?'.repeat(50);
         if(solution?.key) {
             const keys = [solution.key.key1,solution.key.key2,solution.key.key3];
-            solutionTemplate = solutionTemplate.substring(0,keys[0])+'0'+solutionTemplate.substring(keys[0]+1);
-            solutionTemplate = solutionTemplate.substring(0,keys[1])+'0'+solutionTemplate.substring(keys[1]+1);
-            solutionTemplate = solutionTemplate.substring(0,keys[2])+'0'+solutionTemplate.substring(keys[2]+1);
-            setSolutionFilter(solutionTemplate);
+            template = template.substring(0,keys[0])+'0'+template.substring(keys[0]+1);
+            template = template.substring(0,keys[1])+'0'+template.substring(keys[1]+1);
+            template = template.substring(0,keys[2])+'0'+template.substring(keys[2]+1);
+            setSolutionTemplate(template);
             // console.log("solution template: "+solutionTemplate);
         }
     }, [solution]);
@@ -31,7 +30,7 @@ export default function Result({solution}: {solution: Solution}) {
     return (
         <Stack>
             <div>
-                <FilterResultModal solutionTemplate={solutionFilter} onCloseAction={setSolutionFilter}/>
+                <FilterResultModal solutionTemplate={solutionTemplate} onCloseAction={setSolutionFilter}/>
                 <ResultColorFilter colorShown={colorShown} setColorShown={setColorShown} setShowSolutions={setShowSolutions} customColorFilter={solutionFilter}/>
                 <br/>
                 <Stack direction="row" spacing={2}>

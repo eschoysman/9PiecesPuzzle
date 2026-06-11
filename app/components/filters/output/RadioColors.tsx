@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import Stack from '@mui/material/Stack';
 import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";
 import * as blockColors from "@/app/enumeration/BlockColor";

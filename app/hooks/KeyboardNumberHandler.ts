@@ -1,7 +1,7 @@
-import { useState } from "react";
+import {useState} from "react";
 import useEventListener from "@use-it/event-listener";
-import {BlockColor,getBlockColor} from "@/app/enumeration/BlockColor";
 import * as blockColors from "@/app/enumeration/BlockColor";
+import {BlockColor, getBlockColor} from "@/app/enumeration/BlockColor";
 
 const keyboardNumberListener = (enable:boolean=true) => {
     const [block, setBlock] = useState<BlockColor>(blockColors.UNKNOWN);

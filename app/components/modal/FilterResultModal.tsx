@@ -54,9 +54,12 @@ export default function FilterResultModal({solutionTemplate, onCloseAction}: Fil
     }
 
     const handleCellClick = (index: number):void => {
-        setSolutionFilter(currentFilter => {
-            return currentFilter.substring(0,index)+selectedBlock.value+currentFilter.substring(index+1); }
-        );
+        if (solutionFilter.charAt(index) !== '0') {
+            setSolutionFilter(currentFilter => {
+                    return currentFilter.substring(0,index)+selectedBlock.value+currentFilter.substring(index+1);
+                }
+            );
+        }
     }
 
     function emptySolution() {
