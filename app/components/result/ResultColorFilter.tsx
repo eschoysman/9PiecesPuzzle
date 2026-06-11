@@ -34,10 +34,11 @@ export const noColorState:Record<string,string> = {'0': blockColors.EMPTY.color,
 export interface ResultColorFilter {
     colorShown: Record<string,string>,
     setColorShown: (newValue: Record<string,string>) => void,
-    setShowSolutions: (newValue: boolean) => void
+    setShowSolutions: (newValue: boolean) => void,
+    customColorFilter?: string
 }
 
-export default function ResultColorFilter({colorShown, setColorShown, setShowSolutions}: ResultColorFilter) {
+export default function ResultColorFilter({colorShown, setColorShown, setShowSolutions, customColorFilter}: ResultColorFilter) {
 
     const [isAllSelected, setAllSelected] = useState<boolean>(false);
     const [isIndeterminate, setIndeterminate] = useState<boolean>(false);
@@ -48,6 +49,16 @@ export default function ResultColorFilter({colorShown, setColorShown, setShowSol
         setIndeterminate(values.some(value => isChecked(value)) && values.some(value => !isChecked(value)));
         setShowSolutions(!!Object.keys(colorShown).slice(1,10).find(value => isChecked(value)));
     }, [colorShown]);
+
+    useEffect(() => {
+        if(customColorFilter) {
+            const newColorsShown = {...noColorState};
+            Array.from(customColorFilter).forEach((value)=> {
+                newColorsShown[value] = allColorsState[value];
+            });
+            setColorShown(newColorsShown);
+        }
+    }, [customColorFilter]);
 
     const sxParams = (colorValue:string)=> ({
         color: colorValue,

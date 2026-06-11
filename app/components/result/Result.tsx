@@ -20,11 +20,11 @@ export default function Result({solution}: {solution: Solution}) {
         let solutionTemplate = '?'.repeat(50);
         if(solution?.key) {
             const keys = [solution.key.key1,solution.key.key2,solution.key.key3];
-            solutionTemplate = solutionTemplate.substring(0,keys[0])+'X'+solutionTemplate.substring(keys[0]+1);
-            solutionTemplate = solutionTemplate.substring(0,keys[1])+'X'+solutionTemplate.substring(keys[1]+1);
-            solutionTemplate = solutionTemplate.substring(0,keys[2])+'X'+solutionTemplate.substring(keys[2]+1);
+            solutionTemplate = solutionTemplate.substring(0,keys[0])+'0'+solutionTemplate.substring(keys[0]+1);
+            solutionTemplate = solutionTemplate.substring(0,keys[1])+'0'+solutionTemplate.substring(keys[1]+1);
+            solutionTemplate = solutionTemplate.substring(0,keys[2])+'0'+solutionTemplate.substring(keys[2]+1);
             setSolutionFilter(solutionTemplate);
-            console.log("solution template: "+solutionTemplate);
+            // console.log("solution template: "+solutionTemplate);
         }
     }, [solution]);
 
@@ -32,7 +32,7 @@ export default function Result({solution}: {solution: Solution}) {
         <Stack>
             <div>
                 <FilterResultModal solutionTemplate={solutionFilter} onCloseAction={setSolutionFilter}/>
-                <ResultColorFilter colorShown={colorShown} setColorShown={setColorShown} setShowSolutions={setShowSolutions}/>
+                <ResultColorFilter colorShown={colorShown} setColorShown={setColorShown} setShowSolutions={setShowSolutions} customColorFilter={solutionFilter}/>
                 <br/>
                 <Stack direction="row" spacing={2}>
                     <Box>Size</Box>

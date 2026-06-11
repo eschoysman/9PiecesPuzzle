@@ -23,8 +23,8 @@ const style = {
 };
 
 export interface FilterResultModalProps {
-    solutionTemplate?: string;
-    onCloseAction?:(solutionFilter:string)=>void;
+    solutionTemplate?: string,
+    onCloseAction?:(solutionFilter:string)=>void
 }
 
 export default function FilterResultModal({solutionTemplate, onCloseAction}: FilterResultModalProps) {
@@ -33,9 +33,9 @@ export default function FilterResultModal({solutionTemplate, onCloseAction}: Fil
     const [solutionFilter, setSolutionFilter] = useState(solutionTemplate || blockColors.UNKNOWN.value.repeat(50));
     const [selectedBlock, setSelectedBlock] = useState<BlockColor>(blockColors.RED);
 
-    useEffect(() => {
-        console.log("Template:",solutionTemplate);
-    }, [solutionFilter]);
+    // useEffect(() => {
+    //     console.log("Template:",solutionTemplate);
+    // }, [solutionFilter]);
 
     useEffect(() => {
         handleCleanFilter();
@@ -70,7 +70,7 @@ export default function FilterResultModal({solutionTemplate, onCloseAction}: Fil
 
     return (
         <div>
-            <Button variant="contained" size="large" key="customFilter" style={{width:"100%"}} onClick={handleOpen}>Custom Filter</Button>
+            <Button variant="contained" size="large" key="customFilter" onClick={handleOpen}>Custom Filter</Button>
             <Modal  open={open}
                     onClose={handleClose}
                     aria-labelledby="modal-modal-title"
