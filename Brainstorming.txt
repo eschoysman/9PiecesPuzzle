@@ -105,15 +105,15 @@ Struttura package attuale:
 	\result: Result, ResultColorFilter, Solutions
 
 
-nuova struttura package (più ordinata?), stuttura per gerarchia e responsabilità nel FE:
+nuova struttura package (più ordinata?), struttura per gerarchia e responsabilità nel FE:
 	\home: Home
 	\home\explore: Explore
 	\home\explore\detail: Detail
 	\home\explore\result: Result
 	\home\explore\solution: Solutions
 
-	\common\grid: Grid (common servirebbe se e quando ci sarà una modalià "gioco", dato che saranno componenti in comune con "explore")
-	\common\cell: Cell (common servirebbe se e quando ci sarà una modalià "gioco", dato che saranno componenti in comune con "explore")
+	\common\grid: Grid (common servirebbe se e quando ci sarà una modalità "Game", dato che saranno componenti in comune con "explore")
+	\common\cell: Cell (common servirebbe se e quando ci sarà una modalità "Game", dato che saranno componenti in comune con "explore")
 
 	\filter\input: FilterInput
 	\filter\output: ResultColorFilter, FilterResultModal (da unire come unico componente, come per FilterInput)

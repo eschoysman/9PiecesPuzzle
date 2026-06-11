@@ -2,10 +2,10 @@ import Stack from "@mui/material/Stack";
 import * as blockColors from "@/app/enumeration/BlockColor";
 import {getBlockColor} from "@/app/enumeration/BlockColor";
 import {useEffect, useState} from "react";
-import {Cell} from "@/app/components/cell/Cell";
+import {Cell} from "@/app/components/common/cell/Cell";
 import Checkbox from "@mui/material/Checkbox";
 import Tooltip from '@mui/material/Tooltip';
-import backgroundImage from '../../../public/img/allColorBackground.png';
+import backgroundImage from '../../../../public/img/allColorBackground.png';
 
 
 export const allColorsState:Record<string,string> = {'0': blockColors.EMPTY.color,

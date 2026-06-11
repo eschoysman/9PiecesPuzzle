@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import Input from '@mui/material/Input';
 
 import {Solution} from "@/app/model/Solution";
-import {Grid, GridInput} from "@/app/components/grid/Grid";
+import {Grid, GridInput} from "@/app/components/common/grid/Grid";
 
 export interface SolutionsProps {
     showSolutions:boolean,

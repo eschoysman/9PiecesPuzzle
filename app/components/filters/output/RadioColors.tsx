@@ -1,9 +1,9 @@
 import {useEffect, useRef, useState} from "react";
 import Stack from '@mui/material/Stack';
-import {allColorsState} from "@/app/components/result/ResultColorFilter";
+import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";
 import * as blockColors from "@/app/enumeration/BlockColor";
 import {BlockColor, getBlockColor} from "@/app/enumeration/BlockColor";
-import {Cell} from "@/app/components/cell/Cell";
+import {Cell} from "@/app/components/common/cell/Cell";
 import Tooltip from '@mui/material/Tooltip';
 import Radio from '@mui/material/Radio';
 import backgroundImage from "@/public/img/allColorBackground.png";

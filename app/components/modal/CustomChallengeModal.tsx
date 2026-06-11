@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import {Grid, GridInput} from "@/app/components/grid/Grid";
+import {Grid, GridInput} from "@/app/components/common/grid/Grid";
 import {createKeyFromCode} from "@/app/model/Key";
-import {allColorsState} from "@/app/components/result/ResultColorFilter";
+import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";
 import Stack from "@mui/material/Stack";
 
 const style = {

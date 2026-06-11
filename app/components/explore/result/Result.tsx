@@ -3,11 +3,11 @@ import {Solution} from "@/app/model/Solution";
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
-import Solutions from '@/app/components/result/Solutions';
-import ResultColorFilter, {noColorState} from "@/app/components/result/ResultColorFilter";
+import Solutions from '@/app/components/explore/solution/Solutions';
+import ResultColorFilter, {noColorState} from "@/app/components/filters/output/ResultColorFilter";
 import KeyboardListener from '@/app/hooks/KeyboardNumberHandler';
 import {refresh} from "next/cache";
-import FilterResultModal from '@/app/components/filters/output/FilterResultModal'
+import FilterResultModal from '@/app/components/modal/FilterResultModal'
 
 export default function Result({solution}: {solution: Solution}) {
 

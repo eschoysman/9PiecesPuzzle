@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Modal from '@mui/material/Modal';
-import {Grid, GridInput} from "@/app/components/grid/Grid";
-import {allColorsState} from "@/app/components/result/ResultColorFilter";
+import {Grid, GridInput} from "@/app/components/common/grid/Grid";
+import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";
 import * as blockColors from "@/app/enumeration/BlockColor";
 import {BlockColor} from "@/app/enumeration/BlockColor";
 import RadioColors from "@/app/components/filters/output/RadioColors";
@@ -85,7 +85,7 @@ export default function FilterResultModal({solutionTemplate, onCloseAction}: Fil
                         <Grid gridData={emptySolution()}/>
                         <Stack direction="row" spacing={2}>
                             <Button variant="contained" size="small" key="close" style={{width: "50%"}} onClick={handleCleanFilter}>Clean filter</Button>
-                            <Button variant="contained" size="small" key="close" style={{width: "50%"}} onClick={handleClose}>Close</Button>
+                            <Button variant="contained" size="small" key="close" style={{width: "50%"}} onClick={handleClose}>Confirm</Button>
                         </Stack>
                     </Stack>
                 </Box>
