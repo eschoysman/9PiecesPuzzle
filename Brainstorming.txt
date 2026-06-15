@@ -66,64 +66,6 @@ ID: {#####/####}			/						/
 
 
 
-
-=================================
-===== Suddivisione packages =====
-=================================
-
-
-Struttura componenti:
-Home
-	Explore
-		FilterInput
-			CustomChallengeModal
-				Grid
-					Cell
-		Detail
-			{no custom component}
-		Result
-			ResultColorFilter
-				FilterResultModal
-					Cell (Radio)
-					Grid
-						Cell
-				Cell (Checkbox)
-			Solutions
-				Grid
-					Cell
-
-
-Struttura package attuale:
-	\cell: Cell
-	\details: Details
-	\explore: Explore
-	\filter\input: FilterInput
-	\filter\output: FilterResultModal
-	\grid: Grid
-	\home: Home
-	\modal: CustomChallengeModal
-	\result: Result, ResultColorFilter, Solutions
-
-
-nuova struttura package (più ordinata?), struttura per gerarchia e responsabilità nel FE:
-	\home: Home
-	\home\explore: Explore
-	\home\explore\detail: Detail
-	\home\explore\result: Result
-	\home\explore\solution: Solutions
-
-	\common\grid: Grid (common servirebbe se e quando ci sarà una modalità "Game", dato che saranno componenti in comune con "explore")
-	\common\cell: Cell (common servirebbe se e quando ci sarà una modalità "Game", dato che saranno componenti in comune con "explore")
-
-	\filter\input: FilterInput
-	\filter\output: ResultColorFilter, FilterResultModal (da unire come unico componente, come per FilterInput)
-
-	\modals: estrapolazione della componente modale da CustomChallengeModal e FilterResultModal
-
-
-
-
-
 =============================
 ===== TEMPLATE - Puzzle =====
 =============================
@@ -174,3 +116,88 @@ Orientazioni/flip:
 rotate (90° CW)		-> current = current%4==3 ? current-3 : current+1;
 rotate (90° CCW)	-> current = current%4==0 ? current+3 : current-1;
 flip				-> current = (current+4)%8
+
+
+
+
+Grafica FE:
+
++------+-----------------+--------------------+-------------------------------+
+| Home | 9 Pieces Puzzle | Perpetual Calendar | Play It! |             [lang] |		almeno eng (default) e ita
++------+-----------------+--------------------+-------------------------------+
+|                                                                             |
+...
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+
+
+Home
+
++------+-----------------+--------------------+-------------------------------+
+| Home | 9 Pieces Puzzle | Perpetual Calendar | Play It! |             [lang] |
++------+-----------------+--------------------+-------------------------------+
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|            +-------------+    +-------------+    +-------------+            |
+|            |             |    |             |    |             |            |
+|            |  Perpetual  |    |  9 Pieces   |    |     Play    |            |
+|            |  Calendar   |    |   Puzzle    |    |     It!     |            |
+|            |             |    |             |    |             |            |
+|            +-------------+    +-------------+    +-------------+            |
+|                                                                             |
+|                                    Help                                     |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+
+
+9 Pieces Puzzle
+come adesso (da rivedere), ma SENZA la parte delle date
+(da rivedere il componente "dettaglio"?)
+
++------+-----------------+--------------------+-------------------------------+
+| Home | 9 Pieces Puzzle | Perpetual Calendar | Play It! |             [lang] |
++------+-----------------+--------------------+-------------------------------+
+|                                                                             |
+...
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+
+
+Perpetual Calendar
+come adesso, ma ridotto alle sole Date, quindi SOLO:
+	- Pick a date
+	- Random Date Challenge
+(da rivedere il componente "dettaglio"?)
+
++------+-----------------+--------------------+-------------------------------+
+| Home | 9 Pieces Puzzle | Perpetual Calendar | Play It! |             [lang] |
++------+-----------------+--------------------+-------------------------------+
+|                                                                             |
+...
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+
+
+Play It!
+	WIP - forse un giorno ci sarà!
+
++------+-----------------+--------------------+-------------------------------+
+| Home | 9 Pieces Puzzle | Perpetual Calendar | Play It! |             [lang] |
++------+-----------------+--------------------+-------------------------------+
+|                                                                             |
+...
+|                                                                             |
++-----------------------------------------------------------------------------+
