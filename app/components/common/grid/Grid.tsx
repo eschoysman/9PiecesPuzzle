@@ -1,5 +1,5 @@
 import {JSX} from "react";
-import {Cell} from "@/app/components/cell/Cell";
+import {Cell} from "@/app/components/common/cell/Cell";
 import * as blockColors from "@/app/enumeration/BlockColor";
 import "./grid.css"
 

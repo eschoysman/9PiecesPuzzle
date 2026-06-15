@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 import * as challengeService from "@/app/hooks/challenge-hook";
 import Stack from '@mui/material/Stack';
-import {Solution, EMPTY_SOLUTION} from "@/app/model/Solution";
+import {Solution} from "@/app/model/Solution";
 import FilterInput from '@/app/components/filters/input/FilterInput';
-import Detail from '@/app/components/details/Detail';
-import Result from '@/app/components/result/Result';
+import Detail from '@/app/components/explore/details/Detail';
+import Result from '@/app/components/explore/result/Result';
 
 import "./explore.css";
 
