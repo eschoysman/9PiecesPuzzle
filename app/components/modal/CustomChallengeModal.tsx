@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box, Button, Typography, Modal, Stack} from '@mui/material';
+import {Box, Button, Modal, Stack, Typography} from '@mui/material';
 import {Grid, GridInput} from "@/app/components/common/grid/Grid";
 import {createKeyFromCode} from "@/app/model/Key";
 import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";

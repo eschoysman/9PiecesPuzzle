@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import {Stack, Box, useMediaQuery} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import {Box, Stack, useMediaQuery} from '@mui/material';
+import {useTheme} from '@mui/material/styles';
 import * as challengeService from "@/app/hooks/challenge-hook";
 import {Solution} from "@/app/model/Solution";
 import FilterInput from '@/app/components/filters/input/FilterInput';
