@@ -1,7 +1,9 @@
 import {JSX} from "react";
+import Stack from '@mui/material/Stack';
 import {Cell} from "@/app/components/common/cell/Cell";
 import * as blockColors from "@/app/enumeration/BlockColor";
 import "./grid.css"
+import Box from "@mui/material/Box";
 
 export interface GridInput {
     id?: string;
@@ -35,14 +37,12 @@ export const Grid = ({gridData}:{gridData:GridInput}) => {
     ) : [];
     return (
         <>
-            <div>
-                <div className="solutionGrid" style={{
-                    maxWidth: (10*cellSize)+"px",
-                }}>
+            <Stack>
+                <Box className="solutionGrid" sx={{ width: (10*cellSize)+"px" }}>
                     {listCells}
-                </div>
+                </Box>
                 {gridData.id && <span>ID: {gridData.id}</span>}
-            </div>
+            </Stack>
         </>
     );
 

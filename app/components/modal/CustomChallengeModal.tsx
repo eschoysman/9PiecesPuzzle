@@ -1,12 +1,8 @@
 import {useEffect, useState} from "react";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import {Box, Button, Typography, Modal, Stack} from '@mui/material';
 import {Grid, GridInput} from "@/app/components/common/grid/Grid";
 import {createKeyFromCode} from "@/app/model/Key";
 import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";
-import Stack from "@mui/material/Stack";
 
 const style = {
   position: 'absolute',
@@ -71,7 +67,7 @@ export default function CustomChallengeModal({onCloseAction}: {onCloseAction:(ne
     }
 
     return (
-        <div>
+        <>
             <Button variant="contained" size="large" key="customPuzzle" style={{width:"100%"}} onClick={handleOpen}>Custom Challenge</Button>
             <Modal  open={open}
                     onClose={handleClose}
@@ -87,6 +83,6 @@ export default function CustomChallengeModal({onCloseAction}: {onCloseAction:(ne
                     </Stack>
                 </Box>
             </Modal>
-        </div>
+        </>
     );
 }

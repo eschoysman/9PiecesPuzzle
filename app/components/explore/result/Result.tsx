@@ -41,6 +41,7 @@ export default function Result({solution}: {solution: Solution}) {
                                 max={110}
                                 marks
                                 defaultValue={cellSize}
+                                valueLabelDisplay="auto"
                                 onChange={(event: Event, value: number, activeThumb: number)=>setCellSize(value)}/>
                     </Box>
                 </Stack>

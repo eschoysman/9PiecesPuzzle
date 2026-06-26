@@ -76,7 +76,7 @@ export default function Solutions({showSolutions,solution,cellSize,colorToShow,f
             showSolutions ? (
                 hasSolutions ? (
                     <Stack >
-                        {solution?.numberOfSolutions>1 && <div>Filter for Index Key: <Input size="small" type="number" placeholder="KeyId" value={subKey} onChange={(e)=>setSubKey(Number(e.target.value))}/> (in range 0-{solution?.numberOfSolutions})</div>}
+                        {solution?.numberOfSolutions>1 && <div>Filter for Index Key: <Input size="small" type="number"  style={{width:'3.5em'}} placeholder="KeyId" value={subKey} onChange={(e)=>setSubKey(Number(e.target.value))}/> (in range 0-{solution?.numberOfSolutions})</div>}
                         <div className="solutionsGrid">{listSolutions}</div>
                     </Stack>
                 ) : (
