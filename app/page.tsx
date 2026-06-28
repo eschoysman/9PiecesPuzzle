@@ -1,17 +1,18 @@
 'use client';
 import {StrictMode} from "react";
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 
-import {Home} from "@/app/components/home/Home";
-// import store from './app/store/store'
+import {store} from '@/app/store';
+import Counter from "@/app/features/counter/Counter";
 
 const App = () => {
 
   return (
       <StrictMode>
-          {/*<Provider store={store}>*/}
-              <Home/>
-          {/*</Provider>*/}
+          <Provider store={store}>
+              {/*<Home/>*/}
+              <Counter/>
+          </Provider>
       </StrictMode>
   );
 

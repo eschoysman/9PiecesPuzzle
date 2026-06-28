@@ -1,8 +1,12 @@
-import * as challengeService from "../services/challengeService";
-import {Solution} from "@/app/model/Solution";
+import * as challengeService from "../services/puzzleService";
+import {EMPTY_SOLUTION, Solution} from "@/app/model/Solution";
+
+const fetchNoSolution = (): Promise<Solution> => {
+    return new Promise((resolve, reject) => { resolve(EMPTY_SOLUTION) });
+};
 
 export const useGetChallengeByKeyId = () => {
-    const challengeByKeyId = (keyID:number):Promise<Solution> => challengeService.getByKeyId(keyID);
+    const challengeByKeyId = (keyID?:number):Promise<Solution> => (typeof keyID !== "number" || keyID<=0 || keyID>19600) ? fetchNoSolution() : challengeService.getByKeyId(keyID);
     return { challengeByKeyId };
 };
 
