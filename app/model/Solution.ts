@@ -3,12 +3,16 @@ import {Combination} from "@/app/model/Combination";
 
 export interface Solution {
 	key: Key;
+	detail: Detail;
+	combinations: Combination[];
+	template: string;
+}
+export interface Detail {
 	type: string;
 	dayOfWeek?: string,
 	dayOfMonth?: number,
 	month?: string,
 	numberOfSolutions: number,
-	combinations: Combination[];
 }
 
 export const EMPTY_SOLUTION: Solution = {
@@ -18,10 +22,13 @@ export const EMPTY_SOLUTION: Solution = {
 		key2: 0,
 		key3: 0
 	},
-	type: "",
-	dayOfWeek: "-",
-	dayOfMonth: 0,
-	month: "-",
-	numberOfSolutions: 0,
-	combinations: []
+	detail: {
+		type: "",
+		dayOfWeek: "-",
+		dayOfMonth: 0,
+		month: "-",
+		numberOfSolutions: 0,
+	},
+	combinations: [],
+	template: '?'.repeat(50)
 };

@@ -1,8 +1,6 @@
 import {createAppSlice} from "@/app/createAppSlice";
-import type {RootState} from '@/app/store';
 import {EMPTY_SOLUTION, Solution} from "@/app/model/Solution";
 import * as challengeService from "@/app/hooks/challenge-hook";
-import {createSelectorIdentity} from "@/app/hooks/hooksSelectors";
 
 
 // Define a type for the slice state
@@ -19,7 +17,7 @@ const initialState: SolutionState = {
 
 const {challengeByKeyId} = challengeService.useGetChallengeByKeyId();
 
-export const puzzleSolutionSlice = createAppSlice({
+const puzzleSolutionSlice = createAppSlice({
     name: 'puzzleSolution',
     initialState,
     reducers: create => ({
@@ -51,7 +49,3 @@ export const puzzleSolutionSlice = createAppSlice({
 // Action creators are generated for each case reducer function
 export const { fetchSolutionAsync } = puzzleSolutionSlice.actions
 export default puzzleSolutionSlice.reducer
-
-// Other code such as selectors can use the imported `RootState` type
-const selectPuzzleSolution = (state:RootState):SolutionState => state.puzzleSolution;
-export const puzzleSolutionSelector = createSelectorIdentity(selectPuzzleSolution);

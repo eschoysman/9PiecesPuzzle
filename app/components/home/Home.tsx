@@ -1,7 +1,7 @@
 import 'react-tabs/style/react-tabs.css';
 import Explore from "@/app/components/explore/Explore";
 
-export const Home = () => {
+export default function Home(){
 
     return (
         <>

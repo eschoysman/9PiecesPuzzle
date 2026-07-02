@@ -1,11 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
 
-import counterReducer from '@/app/features/counter/counterSlice'
-import puzzleSolutionReducer from '@/app/features/puzzle/puzzleSolutionSlice';
+// import counterReducer from '@/app/features/counter/counterSlice'
+import puzzleSolutionReducer from '@/app/store/puzzleSolution/puzzleSolutionSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    // counter: counterReducer,
     puzzleSolution: puzzleSolutionReducer
   },
 })

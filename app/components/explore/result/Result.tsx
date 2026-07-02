@@ -1,13 +1,17 @@
 import {useEffect, useState} from "react";
-import {Solution} from "@/app/model/Solution";
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
 import Solutions from '@/app/components/explore/solution/Solutions';
 import ResultColorFilter, {noColorState} from "@/app/components/filters/output/ResultColorFilter";
 import FilterResultModal from '@/app/components/modal/FilterResultModal'
+import {useMediaQuery} from "@mui/material";
+import {useAppSelector} from "@/app/hooks/hooksSelectors";
+import {puzzleSolutionSelector} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
 
-export default function Result({solution}: {solution: Solution}) {
+export default function Result() {
+
+    const {status,value: solution} = useAppSelector(puzzleSolutionSelector);
 
     const [cellSize, setCellSize] = useState<number>(25);
     const [showSolutions, setShowSolutions] = useState(false);
@@ -16,16 +20,17 @@ export default function Result({solution}: {solution: Solution}) {
     const [solutionTemplate, setSolutionTemplate] = useState<string>();
 
     useEffect(()=>{
-        let template = '?'.repeat(50);
-        if(solution?.key) {
-            const keys = [solution.key.key1,solution.key.key2,solution.key.key3];
-            template = template.substring(0,keys[0])+'0'+template.substring(keys[0]+1);
-            template = template.substring(0,keys[1])+'0'+template.substring(keys[1]+1);
-            template = template.substring(0,keys[2])+'0'+template.substring(keys[2]+1);
-            setSolutionTemplate(template);
+        if(solution.key) {
+            setSolutionTemplate(solution.template);
             // console.log("solution template: "+solutionTemplate);
         }
     }, [solution]);
+
+    const wideScreen = useMediaQuery('(min-width:845px)');
+
+    useEffect(() => {
+        setCellSize(wideScreen ? 25 : 40);
+    }, [wideScreen]);
 
     return (
         <Stack>
@@ -33,6 +38,7 @@ export default function Result({solution}: {solution: Solution}) {
                 <FilterResultModal solutionTemplate={solutionTemplate} onCloseAction={setSolutionFilter}/>
                 <ResultColorFilter colorShown={colorShown} setColorShown={setColorShown} setShowSolutions={setShowSolutions} customColorFilter={solutionFilter}/>
                 <br/>
+                {wideScreen &&
                 <Stack direction="row" spacing={2}>
                     <Box>Size</Box>
                     <Box sx={{ width: 300 }}>
@@ -45,8 +51,9 @@ export default function Result({solution}: {solution: Solution}) {
                                 onChange={(event: Event, value: number, activeThumb: number)=>setCellSize(value)}/>
                     </Box>
                 </Stack>
+                }
             </div>
-            <Solutions showSolutions={showSolutions} solution={solution} cellSize={cellSize} colorToShow={colorShown} filter={solutionFilter}/>
+            <Solutions showSolutions={showSolutions} cellSize={cellSize} colorToShow={colorShown} filter={solutionFilter}/>
         </Stack>
     );
 

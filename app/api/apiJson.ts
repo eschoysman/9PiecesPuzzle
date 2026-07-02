@@ -1,4 +1,4 @@
-import {api} from "../adapters/api";
+import {api} from "@/app/api/api";
 
 const apiJson = {
     get: (endpoint:string) => api.get(endpoint).then(response => response.json()),

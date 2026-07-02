@@ -11,9 +11,13 @@ import 'dayjs/locale/it';
 import CustomChallengeModal from '@/app/components/modal/CustomChallengeModal'
 
 import {createKeyFromCode} from "@/app/model/Key";
+import {fetchSolutionAsync} from "@/app/store/puzzleSolution/puzzleSolutionSlice";
+import {useAppDispatch} from "@/app/hooks/hooksSelectors";
 
 
-export default function FilterInput({updateSearchKey}: {updateSearchKey: (newType: number) => void}) {
+export default function FilterInput() {
+
+    const dispatch = useAppDispatch();
 
     const [key, setKey] = useState<number>(0);
     const [dateInput, setDateInput] = useState<Dayjs | null>(dayjs());
@@ -33,7 +37,7 @@ export default function FilterInput({updateSearchKey}: {updateSearchKey: (newTyp
     }, [dateInput, month, dateMonth, weekDay]);
 
     useEffect(() => {
-        updateSearchKey(key!);
+        dispatch(fetchSolutionAsync(key));
     }, [key]);
 
     const extractFromDate = () => {

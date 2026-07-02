@@ -4,16 +4,20 @@ import Input from '@mui/material/Input';
 
 import {Solution} from "@/app/model/Solution";
 import {Grid, GridInput} from "@/app/components/common/grid/Grid";
+import {useAppSelector} from "@/app/hooks/hooksSelectors";
+import {puzzleSolutionSelector} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
 
 export interface SolutionsProps {
     showSolutions:boolean,
-    solution: Solution,
+    solution?: Solution,
     cellSize:number,
     colorToShow:Record<string,string|undefined>,
     filter?:string|undefined
 }
 
-export default function Solutions({showSolutions,solution,cellSize,colorToShow,filter}: SolutionsProps) {
+export default function Solutions({showSolutions,cellSize,colorToShow,filter}: SolutionsProps) {
+
+    const {status,value: solution} = useAppSelector(puzzleSolutionSelector);
 
     const [subKey, setSubKey] = useState<number|null>();
     // const [cells ,setCells] = useState<Record<string,JSX.Element>>({});
@@ -45,10 +49,10 @@ export default function Solutions({showSolutions,solution,cellSize,colorToShow,f
         return true;
     }
 
-    const listSolutions = solution?.type!=="UNMAKEABLE" ? solution?.combinations
+    const listSolutions = solution.detail.type!=="UNMAKEABLE" ? solution.combinations
         .map((value,index) => {
             const params = {
-                    id: solution.key.code+"/"+(index+1),
+                    id: value.id,
                     solution: value.combination,
                     squareSize: cellSize,
                     colorToShow: colorToShow,
@@ -64,7 +68,7 @@ export default function Solutions({showSolutions,solution,cellSize,colorToShow,f
 
     function targetSolution() {
         const params = {
-            solution: '?'.repeat(solution?.key.key1) + '0' + '?'.repeat(solution?.key.key2 - solution?.key.key1 - 1) + '0' + '?'.repeat(solution?.key.key3 - solution?.key.key2 - 1) + '0' + '?'.repeat(50 - solution?.key.key3 - 1),
+            solution: solution.template,
             squareSize: cellSize,
             colorToShow: colorToShow,
             // cells: cells
@@ -76,7 +80,7 @@ export default function Solutions({showSolutions,solution,cellSize,colorToShow,f
             showSolutions ? (
                 hasSolutions ? (
                     <Stack >
-                        {solution?.numberOfSolutions>1 && <div>Filter for Index Key: <Input size="small" type="number"  style={{width:'3.5em'}} placeholder="KeyId" value={subKey} onChange={(e)=>setSubKey(Number(e.target.value))}/> (in range 0-{solution?.numberOfSolutions})</div>}
+                        {solution.detail.numberOfSolutions>1 && <div>Filter for Index Key: <Input size="small" type="number"  style={{width:'3.5em'}} placeholder="KeyId" value={subKey} onChange={(e)=>setSubKey(Number(e.target.value))}/> (in range 0-{solution.detail.numberOfSolutions})</div>}
                         <div className="solutionsGrid">{listSolutions}</div>
                     </Stack>
                 ) : (
