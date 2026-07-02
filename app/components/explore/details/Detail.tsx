@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 import "./detail.css"
-import {useAppSelector} from "@/app/hooks/hooksSelectors";
+import {useAppSelector} from "@/app/hooks/SelectorsHook";
 import {puzzleSolutionDetailSelector} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
 
 

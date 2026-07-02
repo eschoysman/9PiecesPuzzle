@@ -4,7 +4,7 @@ import Input from '@mui/material/Input';
 
 import {Solution} from "@/app/model/Solution";
 import {Grid, GridInput} from "@/app/components/common/grid/Grid";
-import {useAppSelector} from "@/app/hooks/hooksSelectors";
+import {useAppSelector} from "@/app/hooks/SelectorsHook";
 import {puzzleSolutionSelector} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
 
 export interface SolutionsProps {

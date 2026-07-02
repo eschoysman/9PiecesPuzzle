@@ -1,4 +1,4 @@
-import * as challengeService from "../services/puzzleService";
+import * as challengeService from "../services/PuzzleService";
 import {EMPTY_SOLUTION, Solution} from "@/app/model/Solution";
 
 const fetchNoSolution = (): Promise<Solution> => {

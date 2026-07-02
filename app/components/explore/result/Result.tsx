@@ -6,7 +6,7 @@ import Solutions from '@/app/components/explore/solution/Solutions';
 import ResultColorFilter, {noColorState} from "@/app/components/filters/output/ResultColorFilter";
 import FilterResultModal from '@/app/components/modal/FilterResultModal'
 import {useMediaQuery} from "@mui/material";
-import {useAppSelector} from "@/app/hooks/hooksSelectors";
+import {useAppSelector} from "@/app/hooks/SelectorsHook";
 import {puzzleSolutionSelector} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
 
 export default function Result() {

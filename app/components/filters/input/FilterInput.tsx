@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import * as challengeService from "@/app/hooks/challenge-hook";
+import * as challengeService from "@/app/hooks/ChallengeHook";
 import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';
 import {DatePicker} from '@mui/x-date-pickers/DatePicker';
@@ -11,8 +11,8 @@ import 'dayjs/locale/it';
 import CustomChallengeModal from '@/app/components/modal/CustomChallengeModal'
 
 import {createKeyFromCode} from "@/app/model/Key";
-import {fetchSolutionAsync} from "@/app/store/puzzleSolution/puzzleSolutionSlice";
-import {useAppDispatch} from "@/app/hooks/hooksSelectors";
+import {fetchSolutionAsync} from "@/app/store/puzzleSolution/PuzzleSolutionSlice";
+import {useAppDispatch} from "@/app/hooks/SelectorsHook";
 
 
 export default function FilterInput() {

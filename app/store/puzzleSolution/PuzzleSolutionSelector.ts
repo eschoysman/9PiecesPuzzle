@@ -1,6 +1,6 @@
-import type {RootState} from '@/app/store/store';
-import {createSelectorIdentity} from "@/app/hooks/hooksSelectors";
-import {SolutionState} from "@/app/store/puzzleSolution/puzzleSolutionSlice";
+import type {RootState} from '@/app/store/Store';
+import {createSelectorIdentity} from "@/app/hooks/SelectorsHook";
+import {SolutionState} from "@/app/store/puzzleSolution/PuzzleSolutionSlice";
 import {Detail} from "@/app/model/Solution";
 
 // Other code such as selectors can use the imported `RootState` type

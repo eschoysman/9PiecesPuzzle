@@ -1,7 +1,7 @@
 import dateSolutions from "../../public/json/dateSolutions.json";
 import unmakeableSolutions from "../../public/json/unmakeableSolutions.json";
 
-import {random, randomNumber} from "@/app/utils/utilities";
+import {random, randomNumber} from "@/app/utils/Utilities";
 import {Combination} from "@/app/model/Combination";
 import {getSolutionTemplate} from "@/app/model/Key";
 import {Solution} from "@/app/model/Solution";

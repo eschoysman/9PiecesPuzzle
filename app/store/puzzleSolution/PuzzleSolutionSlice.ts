@@ -1,6 +1,6 @@
-import {createAppSlice} from "@/app/createAppSlice";
+import {createAppSlice} from "@/app/store/CreateAppSlice";
 import {EMPTY_SOLUTION, Solution} from "@/app/model/Solution";
-import * as challengeService from "@/app/hooks/challenge-hook";
+import * as challengeService from "@/app/hooks/ChallengeHook";
 
 
 // Define a type for the slice state
