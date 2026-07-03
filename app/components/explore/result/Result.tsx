@@ -17,14 +17,6 @@ export default function Result() {
     const [showSolutions, setShowSolutions] = useState(false);
     const [colorShown, setColorShown] = useState<Record<string,string>>(noColorState);
     const [solutionFilter, setSolutionFilter] = useState<string|undefined>();
-    const [solutionTemplate, setSolutionTemplate] = useState<string>();
-
-    useEffect(()=>{
-        if(solution.key) {
-            setSolutionTemplate(solution.template);
-            // console.log("solution template: "+solutionTemplate);
-        }
-    }, [solution]);
 
     const wideScreen = useMediaQuery('(min-width:845px)');
 
@@ -35,7 +27,7 @@ export default function Result() {
     return (
         <Stack>
             <div>
-                <FilterResultModal solutionTemplate={solutionTemplate} onCloseAction={setSolutionFilter}/>
+                <FilterResultModal solutionTemplate={solution.template} onCloseAction={setSolutionFilter}/>
                 <ResultColorFilter colorShown={colorShown} setColorShown={setColorShown} setShowSolutions={setShowSolutions} customColorFilter={solutionFilter}/>
                 <br/>
                 {wideScreen &&

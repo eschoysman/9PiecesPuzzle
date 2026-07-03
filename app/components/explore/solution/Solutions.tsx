@@ -5,7 +5,12 @@ import Input from '@mui/material/Input';
 import {Solution} from "@/app/model/Solution";
 import {Grid, GridInput} from "@/app/components/common/grid/Grid";
 import {useAppSelector} from "@/app/hooks/SelectorsHook";
-import {puzzleSolutionSelector} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
+import {
+    puzzleCombinationsSelector,
+    puzzleSolutionSelector,
+    puzzleTemplateSelector
+} from "@/app/store/puzzleSolution/PuzzleSolutionSelector";
+import {Combination} from "@/app/model/Combination";
 
 export interface SolutionsProps {
     showSolutions:boolean,
@@ -18,6 +23,8 @@ export interface SolutionsProps {
 export default function Solutions({showSolutions,cellSize,colorToShow,filter}: SolutionsProps) {
 
     const {status,value: solution} = useAppSelector(puzzleSolutionSelector);
+    const puzzleTemplate = useAppSelector(puzzleTemplateSelector);
+    const combinations = useAppSelector(puzzleCombinationsSelector);
 
     const [subKey, setSubKey] = useState<number|null>();
     // const [cells ,setCells] = useState<Record<string,JSX.Element>>({});
@@ -37,6 +44,10 @@ export default function Solutions({showSolutions,cellSize,colorToShow,filter}: S
     //     '?': <Cell key={'11'} size={cellSize} color={colorToShow['?'] || blockColors.UNKNOWN.color} />
     // }),[cellSize,colorToShow]);
 
+    function applyFilter(combination: Combination) {
+        return solutionFilter(combination.combination) && (!subKey || combination.subKey === subKey);
+    }
+    
     function solutionFilter(solution: string): boolean {
         if(filter === undefined) {
             return true;
@@ -49,26 +60,24 @@ export default function Solutions({showSolutions,cellSize,colorToShow,filter}: S
         return true;
     }
 
-    const listSolutions = solution.detail.type!=="UNMAKEABLE" ? solution.combinations
-        .map((value,index) => {
-            const params = {
-                    id: value.id,
-                    solution: value.combination,
-                    squareSize: cellSize,
-                    colorToShow: colorToShow,
-                    // cells: cells
-                } as GridInput;
+    const listSolutions = combinations.filter(applyFilter)
+                                                .map((combination) => {
+                                                    const params = {
+                                                            id: combination.id,
+                                                            solution: combination.combination,
+                                                            squareSize: cellSize,
+                                                            colorToShow: colorToShow,
+                                                            // cells: cells
+                                                        } as GridInput;
 
-            if(solutionFilter(value.combination) && (!subKey || index === subKey-1)) {
-                return <Grid key={"grid_"+index} gridData={params}/>
-            }
-        }) : [];
+                                                        return <Grid key={"grid_"+combination.id} gridData={params}/>
+                                                });
 
     const hasSolutions = (listSolutions?.length||0) > 0;
 
     function targetSolution() {
         const params = {
-            solution: solution.template,
+            solution: puzzleTemplate,
             squareSize: cellSize,
             colorToShow: colorToShow,
             // cells: cells

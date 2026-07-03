@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Box, Button, Modal, Stack, Typography} from '@mui/material';
 import {Grid, GridInput} from "@/app/components/common/grid/Grid";
-import {createKeyFromCode} from "@/app/model/Key";
+import {createKeyFromCode, getSolutionTemplateFromKeys} from "@/app/model/Key";
 import {allColorsState} from "@/app/components/filters/output/ResultColorFilter";
 
 const style = {
@@ -24,18 +24,13 @@ export default function CustomChallengeModal({onCloseAction}: {onCloseAction:(ne
     const [key3,setKey3] = useState<number|null>();
 
     useEffect(()=>{
-        let emptySolution = '?'.repeat(50);
-        if(key1!=null) { emptySolution = emptySolution.substring(0,key1)+'X'+emptySolution.substring(key1+1); }
-        if(key2!=null) { emptySolution = emptySolution.substring(0,key2)+'X'+emptySolution.substring(key2+1); }
-        if(key3!=null) { emptySolution = emptySolution.substring(0,key3)+'X'+emptySolution.substring(key3+1); }
-        setSolution(newValue => emptySolution);
+        setSolution(getSolutionTemplateFromKeys(key1,key2,key3));
     },[key1,key2,key3]);
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
         if(key1!=null && key2 && key3) {
-            const newKey = createKeyFromCode([key1,key2,key3])
-            onCloseAction(newKey);
+            onCloseAction(createKeyFromCode([key1,key2,key3]).code);
         }
         else {
             alert("Too few cell selected, no challenge can be created");

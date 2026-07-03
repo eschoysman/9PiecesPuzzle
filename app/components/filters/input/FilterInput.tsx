@@ -76,7 +76,7 @@ export default function FilterInput() {
     }
 
     const loadDate = () => {
-        const newKey = createKeyFromCode([MONTH[month!], DAY_DATE[dateMonth!], DAY_OF_WEEK[weekDay!]])
+        const newKey = createKeyFromCode([MONTH[month!], DAY_DATE[dateMonth!], DAY_OF_WEEK[weekDay!]]).code;
         setKey(newKey);
     }
 

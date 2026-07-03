@@ -2,7 +2,7 @@ import * as challengeService from "../services/PuzzleService";
 import {EMPTY_SOLUTION, Solution} from "@/app/model/Solution";
 
 const fetchNoSolution = (): Promise<Solution> => {
-    return new Promise((resolve, reject) => { resolve(EMPTY_SOLUTION) });
+    return new Promise(resolve => resolve(EMPTY_SOLUTION));
 };
 
 export const useGetChallengeByKeyId = () => {
