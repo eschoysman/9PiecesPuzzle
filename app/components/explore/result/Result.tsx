@@ -28,7 +28,7 @@ export default function Result() {
         <Stack>
             <div>
                 <FilterResultModal solutionTemplate={solution.template} onCloseAction={setSolutionFilter}/>
-                <ResultColorFilter colorShown={colorShown} setColorShown={setColorShown} setShowSolutions={setShowSolutions} customColorFilter={solutionFilter}/>
+                <ResultColorFilter setShowSolutions={setShowSolutions} customColorFilter={solutionFilter}/>
                 <br/>
                 {wideScreen &&
                 <Stack direction="row" spacing={2}>

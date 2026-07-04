@@ -6,6 +6,9 @@ import {Cell} from "@/app/components/common/cell/Cell";
 import Checkbox from "@mui/material/Checkbox";
 import Tooltip from '@mui/material/Tooltip';
 import backgroundImage from '../../../../public/img/allColorBackground.png';
+import {useAppDispatch, useAppSelector} from "@/app/hooks/SelectorsHook";
+import {setColorToShow, updateColorToShow} from "@/app/store/outputFilter/OutputFilterSlice";
+import {outputFilterSelector} from "@/app/store/outputFilter/OutputFilterSelector";
 
 
 export const allColorsState:Record<string,string> = {'0': blockColors.EMPTY.color,
@@ -32,13 +35,16 @@ export const noColorState:Record<string,string> = {'0': blockColors.EMPTY.color,
                                                    'X': blockColors.BLOCKED.color};
 
 export interface ResultColorFilter {
-    colorShown: Record<string,string>,
-    setColorShown: (newValue: Record<string,string>) => void,
+    colorShown?: Record<string,string>,
+    setColorShown?: (newValue: Record<string,string>) => void,
     setShowSolutions: (newValue: boolean) => void,
     customColorFilter?: string
 }
 
-export default function ResultColorFilter({colorShown, setColorShown, setShowSolutions, customColorFilter}: ResultColorFilter) {
+export default function ResultColorFilter({setShowSolutions, customColorFilter}: ResultColorFilter) {
+
+    const dispatch = useAppDispatch();
+    const {cellsColor:colorShown} = useAppSelector(outputFilterSelector);
 
     const [isAllSelected, setAllSelected] = useState<boolean>(false);
     const [isIndeterminate, setIndeterminate] = useState<boolean>(false);
@@ -51,13 +57,14 @@ export default function ResultColorFilter({colorShown, setColorShown, setShowSol
     }, [colorShown]);
 
     useEffect(() => {
-        if(customColorFilter) {
-            const newColorsShown = {...noColorState};
-            Array.from(customColorFilter).forEach((value)=> {
-                newColorsShown[value] = allColorsState[value];
-            });
-            setColorShown(newColorsShown);
-        }
+        dispatch(updateColorToShow(customColorFilter));
+        // if(customColorFilter) {
+        //     const newColorsShown = {...noColorState};
+        //     Array.from(customColorFilter).forEach((value)=> {
+        //         newColorsShown[value] = allColorsState[value];
+        //     });
+        //     setColorShown(newColorsShown);
+        // }
     }, [customColorFilter]);
 
     const sxParams = (colorValue:string)=> ({
@@ -71,12 +78,10 @@ export default function ResultColorFilter({colorShown, setColorShown, setShowSol
         return colorShown[value] !== noColorState[value];
     }
     const handleClick = (value:string, color:string, checked:boolean) => {
-        const newColorsShown = {...colorShown};
-        newColorsShown[value] = checked ? color : noColorState[value];
-        setColorShown(newColorsShown);
+        dispatch(setColorToShow({value,color:(checked ? color : noColorState[value])}));
     };
     const handleSelectAllNone = (checked:boolean) => {
-        setColorShown(checked ? allColorsState : noColorState);
+        dispatch(updateColorToShow(checked ? allColorsState : noColorState));
     };
 
     const createButton = (value:string,index:number) => {

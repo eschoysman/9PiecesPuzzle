@@ -2,11 +2,13 @@ import {configureStore} from '@reduxjs/toolkit'
 
 // import counterReducer from '@/app/features/counter/counterSlice'
 import puzzleSolutionReducer from '@/app/store/puzzleSolution/PuzzleSolutionSlice';
+import outputFilterSlice from "@/app/store/outputFilter/OutputFilterSlice";
 
 export const store = configureStore({
   reducer: {
     // counter: counterReducer,
-    puzzleSolution: puzzleSolutionReducer
+    puzzleSolution: puzzleSolutionReducer,
+    outputFilter: outputFilterSlice,
   },
 })
 

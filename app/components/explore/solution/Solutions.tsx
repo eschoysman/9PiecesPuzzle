@@ -16,11 +16,11 @@ export interface SolutionsProps {
     showSolutions:boolean,
     solution?: Solution,
     cellSize:number,
-    colorToShow:Record<string,string|undefined>,
+    colorToShow?:Record<string,string|undefined>,
     filter?:string|undefined
 }
 
-export default function Solutions({showSolutions,cellSize,colorToShow,filter}: SolutionsProps) {
+export default function Solutions({showSolutions,cellSize,filter}: SolutionsProps) {
 
     const {status,value: solution} = useAppSelector(puzzleSolutionSelector);
     const puzzleTemplate = useAppSelector(puzzleTemplateSelector);
@@ -47,7 +47,7 @@ export default function Solutions({showSolutions,cellSize,colorToShow,filter}: S
     function applyFilter(combination: Combination) {
         return solutionFilter(combination.combination) && (!subKey || combination.subKey === subKey);
     }
-    
+
     function solutionFilter(solution: string): boolean {
         if(filter === undefined) {
             return true;
@@ -66,8 +66,6 @@ export default function Solutions({showSolutions,cellSize,colorToShow,filter}: S
                                                             id: combination.id,
                                                             solution: combination.combination,
                                                             squareSize: cellSize,
-                                                            colorToShow: colorToShow,
-                                                            // cells: cells
                                                         } as GridInput;
 
                                                         return <Grid key={"grid_"+combination.id} gridData={params}/>
@@ -79,8 +77,6 @@ export default function Solutions({showSolutions,cellSize,colorToShow,filter}: S
         const params = {
             solution: puzzleTemplate,
             squareSize: cellSize,
-            colorToShow: colorToShow,
-            // cells: cells
         } as GridInput;
         return <Grid gridData={params}/>
     }
